@@ -19,7 +19,7 @@ jobs:
       - name: Checkout CBOM Generator docs
         uses: actions/checkout@v4
         with:
-          repository: cipheriq/cryptoBOM
+          repository: marcoeg/cryptoBOM
           path: projects/cryptoBOM
           sparse-checkout: |
             docs/pages
