@@ -10,17 +10,102 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - toc:
+      permalink: true
 
 nav:
   - Home: index.md
+  - CBOM Generator:
+    - cbom-generator/index.md
+    - Getting Started:
+      - cbom-generator/getting-started/index.md
+      - Installation: cbom-generator/getting-started/installation.md
+      - Quick Start: cbom-generator/getting-started/quick-start.md
+    - CLI Reference:
+      - cbom-generator/cli-reference/index.md
+      - Output Options: cbom-generator/cli-reference/output-options.md
+      - Privacy Options: cbom-generator/cli-reference/privacy-options.md
+      - Display Options: cbom-generator/cli-reference/display-options.md
+      - Performance Options: cbom-generator/cli-reference/performance-options.md
+      - Deduplication: cbom-generator/cli-reference/deduplication-options.md
+      - Service Discovery: cbom-generator/cli-reference/service-discovery.md
+      - Crypto Registry: cbom-generator/cli-reference/crypto-registry.md
+      - Attestation: cbom-generator/cli-reference/attestation-options.md
+    - Features:
+      - cbom-generator/features/index.md
+      - Asset Discovery: cbom-generator/features/asset-discovery.md
+      - Key Material Detection: cbom-generator/features/key-material-detection.md
+      - Service Dependencies: cbom-generator/features/service-dependencies.md
+      - Protocol Properties: cbom-generator/features/protocol-properties.md
+      - PQC Assessment: cbom-generator/features/pqc-assessment.md
+      - Relationship Graph: cbom-generator/features/relationship-graph.md
+      - Privacy Controls: cbom-generator/features/privacy-controls.md
+      - Deduplication: cbom-generator/features/deduplication.md
+    - Output Format:
+      - cbom-generator/output/index.md
+      - Components: cbom-generator/output/components.md
+      - Crypto Properties: cbom-generator/output/crypto-properties.md
+      - Namespaced Properties: cbom-generator/output/namespaced-properties.md
+      - Dependencies: cbom-generator/output/dependencies.md
+      - Relationships: cbom-generator/output/relationships.md
+    - Playbooks:
+      - cbom-generator/playbooks/index.md
+      - OpenSSH PQC Migration: cbom-generator/playbooks/migrating-openssh.md
+      - TLS Upgrade: cbom-generator/playbooks/tls-upgrade.md
+      - Certificate Rotation: cbom-generator/playbooks/certificate-rotation.md
+      - FIPS Compliance: cbom-generator/playbooks/fips-compliance.md
+    - Troubleshooting:
+      - cbom-generator/troubleshooting/index.md
+      - No Components Found: cbom-generator/troubleshooting/no-components-found.md
+      - Permission Errors: cbom-generator/troubleshooting/permission-errors.md
+      - Performance Tuning: cbom-generator/troubleshooting/performance-tuning.md
+      - Non-Deterministic Output: cbom-generator/troubleshooting/non-deterministic-output.md
+    - Advanced:
+      - cbom-generator/advanced/index.md
+      - Comparing CBOMs: cbom-generator/advanced/comparing-cboms.md
+      - Filtering Output: cbom-generator/advanced/filtering-output.md
+      - Generating Reports: cbom-generator/advanced/generating-reports.md
+    - Reference:
+      - CLI Syntax: cbom-generator/reference/cli-syntax.md
+      - Output Format: cbom-generator/reference/output-format.md
+      - Deprecated Features: cbom-generator/reference/deprecated-features.md
+    - About:
+      - What's New: cbom-generator/about/whats-new.md
+      - Best Practices: cbom-generator/about/best-practices.md
+      - Support: cbom-generator/about/support.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/cipheriq
+      link: https://github.com/CipherIQ
 
 copyright: Copyright &copy; 2025 Graziano Labs Corp.

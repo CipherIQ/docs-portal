@@ -16,22 +16,6 @@ jobs:
       - name: Checkout portal repo
         uses: actions/checkout@v4
 
-      - name: Checkout CBOM Generator docs
-        uses: actions/checkout@v4
-        with:
-          repository: marcoeg/cryptoBOM
-          path: projects/cryptoBOM
-          sparse-checkout: |
-            docs/pages
-            mkdocs.yml
-
-      # Add more project checkouts here:
-      # - name: Checkout Other Project
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: cipheriq/other-project
-      #     path: projects/other-project
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -40,19 +24,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build portal landing page
+      - name: Build docs
         run: mkdocs build
-
-      - name: Build CBOM Generator docs
-        run: |
-          cd projects/cryptoBOM
-          mkdocs build -d ../../site/cbom-generator
-
-      # Add more project builds here:
-      # - name: Build Other Project docs
-      #   run: |
-      #     cd projects/other-project
-      #     mkdocs build -d ../../site/other-project
 
       - name: Add CNAME for custom domain
         run: echo "docs.cipheriq.io" > site/CNAME
