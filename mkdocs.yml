@@ -1,0 +1,26 @@
+site_name: CipherIQ Documentation
+site_description: Documentation portal for CipherIQ products
+site_url: https://docs.cipheriq.io/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+nav:
+  - Home: index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cipheriq
+
+copyright: Copyright &copy; 2025 Graziano Labs Corp.

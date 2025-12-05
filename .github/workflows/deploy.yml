@@ -1,0 +1,69 @@
+name: Deploy Docs Portal
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # Manual trigger for rebuilds
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout portal repo
+        uses: actions/checkout@v4
+
+      - name: Checkout CBOM Generator docs
+        uses: actions/checkout@v4
+        with:
+          repository: cipheriq/cryptoBOM
+          path: projects/cryptoBOM
+          sparse-checkout: |
+            docs/pages
+            mkdocs.yml
+
+      # Add more project checkouts here:
+      # - name: Checkout Other Project
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: cipheriq/other-project
+      #     path: projects/other-project
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build portal landing page
+        run: mkdocs build
+
+      - name: Build CBOM Generator docs
+        run: |
+          cd projects/cryptoBOM
+          mkdocs build -d ../../site/cbom-generator
+
+      # Add more project builds here:
+      # - name: Build Other Project docs
+      #   run: |
+      #     cd projects/other-project
+      #     mkdocs build -d ../../site/other-project
+
+      - name: Add CNAME for custom domain
+        run: echo "docs.cipheriq.io" > site/CNAME
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
