@@ -1,5 +1,5 @@
-site_name: CipherIQ Documentation
-site_description: Documentation portal for CipherIQ products
+site_name: CipherIQ Portal
+site_description: CipherIQ products website
 site_url: https://docs.cipheriq.io/
 
 docs_dir: docs
@@ -7,6 +7,7 @@ site_dir: site
 
 theme:
   name: material
+  logo: assets/cipheriq_icon_reversed_512.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -102,6 +103,14 @@ nav:
       - What's New: cbom-generator/about/whats-new.md
       - Best Practices: cbom-generator/about/best-practices.md
       - Support: cbom-generator/about/support.md
+  - CBOM Explorer:
+    - cbom-explorer/index.md
+  - Crypto Tracer:
+    - crypto-tracer/index.md
+  - PQC Flow:
+    - pqc-flow/index.md
+  - About:
+    - about.md
 
 extra:
   social:

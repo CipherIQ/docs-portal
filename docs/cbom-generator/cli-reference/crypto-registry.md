@@ -198,7 +198,3 @@ cat cbom.json | jq '.components[] | select(.name | contains("my_custom_tls"))'
 
 ---
 
-## See Also
-
-- [Crypto Registry Guide](../../docs/CRYPTO_REGISTRY.md)
-- [Crypto Registry YAML Specification](../../docs/CRYPTO_REGISTRY_YAML_EXTENSION_SPEC.md)

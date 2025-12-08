@@ -162,5 +162,3 @@ config_extraction:
 | `yaml` | YAML format (MongoDB, Kubernetes) |
 | `json` | JSON format (Caddy, modern apps) |
 | `openssl_cipher` | OpenSSL cipher string expansion |
-
-**See Also**: [Plugin Development Guide](../../docs/PLUGIN_GUIDE.md)

@@ -127,8 +127,3 @@ Scanning the actual ELF binaries provides ground truth about what cryptographic 
 3. **Include multiple directories** for comprehensive coverage
 4. **Use embedded plugins** (`plugins/embedded/`) for IoT/embedded services
 5. **Use Yocto crypto registry** (`crypto-registry-yocto.yaml`) for embedded library patterns
-
-**See Also**:
-
-- [Cross-Architecture Scanning Guide](../../docs/CROSS_ARCH_SCANNING.md)
-- [Yocto Testing Guide](../../docs/YOCTO_TESTING_GUIDE.md)
