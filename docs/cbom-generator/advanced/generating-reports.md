@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Generating Reports
 
 Create custom reports from CBOM output.

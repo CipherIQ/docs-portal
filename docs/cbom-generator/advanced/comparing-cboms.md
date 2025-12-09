@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Comparing CBOMs
 
 Track changes in cryptographic assets over time.
 
----
 
 ## Use Cases
 

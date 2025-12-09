@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Filtering Output
 
 Use jq queries to extract specific information from CBOM output.
 
----
 
 ## Basic Queries
 

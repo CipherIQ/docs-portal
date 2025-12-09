@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # Advanced Usage
 
 Expert features for power users and automation.
 
----
+
 
 ## Advanced Topics
 
@@ -11,8 +15,8 @@ Expert features for power users and automation.
 | [Comparing CBOMs](comparing-cboms.md) | Diff CBOMs over time |
 | [Filtering Output](filtering-output.md) | jq queries for analysis |
 | [Generating Reports](generating-reports.md) | Custom report generation |
+| [Container Scanning](container-scanning.md) | Container scanning workflow |
 
----
 
 ## Automation Examples
 
@@ -67,17 +71,10 @@ docker export container_id | tar -C /tmp/container-fs -xf -
 rm -rf /tmp/container-fs
 ```
 
----
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `CBOM_SALT` | Salt for privacy redaction (consistent pseudonyms) |
-| `CBOM_CACHE_DIR` | Cache directory location |
-| `CBOM_LOG_LEVEL` | Logging verbosity |
+[Container Scanning Workflow](container-scanning.md)
 
 ---
+
 
 ## Output Piping
 

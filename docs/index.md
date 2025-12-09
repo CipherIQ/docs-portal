@@ -51,7 +51,7 @@ Scan firmware, containers, and filesystems to inventory:
 
 **CipherIQ Tools**: [cbom-generator](./cbom-generator/index.md) and [cbom-explorer](./cbom-explorer/index.md)
 
-**Output:** Cryptographic Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a> format documenting the complete cryptographic supply chain
+**Output:** Cryptography Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a> format documenting the complete cryptographic supply chain
 
 ### Layer 2: Runtime Monitoring (Production)
 **What cryptography IS actually being used in production**
@@ -99,7 +99,7 @@ This dual-layer approach transforms cryptographic security from **"we think we'r
 ### 1) cbom-generator
 **Static cryptographic asset discovery with PQC readiness assessment**
 
-Scans Linux filesystems, firmware images, and containers to generate comprehensive Cryptographic Bills of Materials (CBOMs) in CycloneDX format.
+Scans Linux filesystems, firmware images, and containers to generate comprehensive Cryptography Bills of Materials (CBOMs) in CycloneDX format.
 
 **Key capabilities:**
 
@@ -124,7 +124,7 @@ Scans Linux filesystems, firmware images, and containers to generate comprehensi
 ### 2) cbom-explorer
 **Web-based CBOM visualization and navigation**
 
-Lightweight, browser-based tool for exploring Cryptographic Bills of Materials. No installation required—runs entirely in your browser.
+Lightweight, browser-based tool for exploring Cryptography Bills of Materials. No installation required—runs entirely in your browser.
 
 **Key capabilities:**
 
