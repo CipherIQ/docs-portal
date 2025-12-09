@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Privacy Options
 
 Control personal data handling for GDPR/CCPA compliance.
 
----
 
 ## `--no-personal-data` (Default: ON)
 
@@ -60,7 +63,7 @@ Disable network operations.
 
 **Status**: This flag is accepted and recorded in output metadata, but has no functional effect in v1.0 because network operations are not yet implemented.
 
-**Planned for v1.1+**:
+**Planned for v2.0+**:
 
 - OCSP (Online Certificate Status Protocol) validation
 - CRL (Certificate Revocation List) checking

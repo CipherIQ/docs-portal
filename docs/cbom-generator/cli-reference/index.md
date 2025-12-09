@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # CLI Reference
 
 Complete command-line interface documentation for CBOM Generator.
@@ -27,19 +31,19 @@ If no paths are specified, scans default system locations.
 
 ```bash
 # Basic scan
-./build/cbom-generator --output cbom.json
+./build/cbom-generator --output cbom.json /etc
 
 # Privacy-compliant scan
-./build/cbom-generator --no-personal-data --output cbom.json
+./build/cbom-generator --no-personal-data --output cbom.json /etc
 
 # Service discovery with plugins
-./build/cbom-generator --discover-services --plugin-dir plugins --output cbom.json
+./build/cbom-generator --discover-services --plugin-dir plugins/ubuntu --output cbom.json /etc
 
 # CycloneDX 1.7 with dependencies
-./build/cbom-generator --cyclonedx-spec 1.7 --output cbom.json
+./build/cbom-generator --cyclonedx-spec 1.7 --output cbom.json /etc
 
 # TUI mode with error logging
-./build/cbom-generator --tui --error-log errors.log --output cbom.json
+./build/cbom-generator --tui --error-log errors.log --output cbom.json /etc
 
 # Cross-architecture (Yocto/embedded)
 ./build/cbom-generator --cross-arch --crypto-registry crypto-registry-yocto.yaml \
@@ -53,10 +57,11 @@ If no paths are specified, scans default system locations.
 ./build/cbom-generator \
     --no-personal-data \
     --discover-services \
-    --plugin-dir plugins \
-    --dedup-mode safe \
+    --plugin-dir plugins/ubuntu \
+    --crypto-registry registry/crypto-registry-ubuntu.yaml \
     --format cyclonedx --cyclonedx-spec 1.7 \
     --output production-cbom.json
+        /etc /usr/bin /usr/sbin
 ```
 
 ### Compliance Audit
@@ -65,8 +70,12 @@ If no paths are specified, scans default system locations.
     --no-personal-data \
     --no-network \
     --deterministic \
+    --discover-services \
+    --plugin-dir plugins/ubuntu \
+    --crypto-registry registry/crypto-registry-ubuntu.yaml \
     --pqc-report pqc-migration.txt \
     --output audit-cbom.json
+        /etc /usr/bin /usr/sbin
 ```
 
 ### Embedded/Yocto Scan
@@ -76,8 +85,8 @@ ROOTFS=/path/to/yocto/rootfs
     --cross-arch \
     --discover-services \
     --plugin-dir plugins/embedded \
-    --crypto-registry crypto-registry-yocto.yaml \
+    --crypto-registry registry/crypto-registry-yocto.yaml \
     --format cyclonedx --cyclonedx-spec 1.7 \
     --output yocto-cbom.json \
-    $ROOTFS/usr/bin $ROOTFS/usr/sbin $ROOTFS/usr/lib $ROOTFS/etc
+        $ROOTFS/usr/bin $ROOTFS/usr/sbin $ROOTFS/usr/lib $ROOTFS/etc
 ```

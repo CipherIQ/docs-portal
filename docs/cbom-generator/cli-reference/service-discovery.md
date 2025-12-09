@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Service Discovery Options (v1.3)
 
 YAML plugin-driven service discovery for detecting running services and extracting their cryptographic configurations.
 
----
 
 ## `--discover-services`
 

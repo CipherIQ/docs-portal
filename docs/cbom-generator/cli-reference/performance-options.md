@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Performance Options
 
 Control threading, determinism, and cross-architecture scanning.
 
----
 
 ## `-t, --threads N`
 
@@ -68,9 +71,9 @@ Enable deterministic output (same input produces identical hash).
 
 ---
 
-## `--cross-arch` (v1.7+)
+## `--cross-arch`
 
-Enable cross-architecture scanning mode for embedded/Yocto systems.
+Enable cross-architecture scanning mode for embedded systems.
 
 This is the **canonical way** to scan cross-compiled rootfs images (e.g., ARM64 Yocto builds from an x86_64 development host).
 

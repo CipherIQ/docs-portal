@@ -1,8 +1,10 @@
-# Crypto Registry Extension (v1.6)
+---
+hide:
+  - toc
+---
+# Crypto Registry Extension 
 
 Extensible crypto library registry via YAML configuration for detecting cryptographic libraries across different Linux distributions.
-
----
 
 ## Overview
 
@@ -14,8 +16,6 @@ The **Crypto Registry** is a declarative catalog of cryptographic libraries, pro
 - Detect custom/vendor-specific crypto libraries
 - Platform-aware crypto visibility
 - Instant adaptation via YAML updates
-
----
 
 ## `--crypto-registry FILE`
 
@@ -43,8 +43,6 @@ Load external crypto library registry from YAML file to extend built-in registry
 # Output: WARNING: Continuing with built-in crypto registry only.
 ```
 
----
-
 ## How Registry Works in Scan Flow
 
 When scanning binaries, the CBOM Generator uses the registry to identify cryptographic dependencies:
@@ -71,7 +69,6 @@ Binary: /usr/sbin/nginx
 Result: nginx DEPENDS_ON openssl
 ```
 
----
 
 ## Built-in Crypto Libraries
 
@@ -91,7 +88,6 @@ The generator includes 5 built-in crypto libraries:
 - `wireguard_internal` - WireGuard VPN crypto
 - `age_internal` - age encryption tool
 
----
 
 ## Available Registry Files
 
@@ -102,7 +98,6 @@ The generator includes 5 built-in crypto libraries:
 | `registry/crypto-registry-openwrt.yaml` | 6 | 7 | OpenWrt, LEDE, routers |
 | `registry/crypto-registry-alpine.yaml` | 8 | 7 | Alpine, Docker containers |
 
----
 
 ## YAML Registry Format
 
@@ -138,7 +133,6 @@ embedded_crypto_apps:
 - Pattern `libssl.so` matches `libssl.so.3`, `libssl.so.1.1`
 - Pattern `openssl` matches `openssl-dev`, `libopenssl3`
 
----
 
 ## Creating Custom Registries
 
@@ -173,7 +167,6 @@ crypto_libraries:
 cat cbom.json | jq '.components[] | select(.name | contains("my_custom_tls"))'
 ```
 
----
 
 ## Security Considerations
 

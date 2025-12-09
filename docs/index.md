@@ -3,8 +3,11 @@ hide:
   - toc
 ---
 
-# **Cryptographic Observability for the Quantum Era**
+<figure markdown="span">
+  ![Image title](assets/cipheriq_logo_2x.png){ width="500" }
+</figure>
 
+# **Cryptographic Observability for the Quantum Era**
 
 Modern organizations operate in an environment where cryptographic transparency, algorithm safety, and software supply-chain security are no longer optional. Regulatory bodies, international standards organizations, and sector-specific authorities now require a clear understanding of what cryptography is used within systems, how secure it is, and how organizations plan to transition to quantum-resistant alternatives.
 
@@ -48,7 +51,7 @@ Scan firmware, containers, and filesystems to inventory:
 
 **CipherIQ Tools**: [cbom-generator](./cbom-generator/index.md) and [cbom-explorer](./cbom-explorer/index.md)
 
-**Output:** *Cryptographic Bill of Material* (CBOM) in JSON CycloneDX format documenting the complete cryptographic supply chain
+**Output:** Cryptographic Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a> format documenting the complete cryptographic supply chain
 
 ### Layer 2: Runtime Monitoring (Production)
 **What cryptography IS actually being used in production**

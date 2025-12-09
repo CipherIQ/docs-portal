@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # CBOM Generator
 
 **Version**: 1.9.0 | **Platform**: Linux (Ubuntu, RHEL, Debian)

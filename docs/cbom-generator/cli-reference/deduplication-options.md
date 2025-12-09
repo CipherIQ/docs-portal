@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Deduplication Options
 
 Control how duplicate cryptographic assets are handled.

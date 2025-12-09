@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Output Options
 
 Control where and how CBOM output is generated.
 
----
 
 ## `-o, --output FILE`
 

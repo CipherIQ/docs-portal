@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # Display Options
 
 Control visual output and reporting.
 
----
+
 
 ## `--tui`
 
@@ -31,18 +35,18 @@ Enable Terminal User Interface with real-time progress display.
 **Display Layout**:
 ```
 +- CBOM Generator ------------------------- CipherIQ v1.0.0 -+
-| Progress: [####################] 100%      Time: 00:00:03 |
-+- Scanning Progress ------------------------------------------+
-| [X] Certificate Scanner  215000 files   152 certs         |
-| [X] Key Scanner         216000 files     0 keys           |
-| [X] Package Scanner     System-wide      0 pkgs           |
-| [X] Service Scanner     System-wide      0 svcs           |
-| [X] Filesystem Scanner  164000 files  3689 files          |
-| [X] Output Generation   System-wide      1 output         |
-+- Status ----------------------------------------------------|
-| Total Assets: 289 (193 certs, 16 keys, 14 algos, ...)     |
+| Progress: [####################] 100%       Time: 00:00:03 |
++- Scanning Progress ----------------------------------------+
+| [X] Certificate Scanner  215000 files   193 certs          |
+| [X] Key Scanner         216000 files     16 keys           |
+| [X] Package Scanner     System-wide      125 pkgs          |
+| [X] Service Scanner     System-wide      12 svcs           |
+| [X] Filesystem Scanner  164000 files  3689 files           |
+| [X] Output Generation   System-wide      1 output          |
++- Status ---------------------------------------------------|
+| Total Assets: 289 (193 certs, 16 keys, 14 algos, ...)      |
 | COMPLETE                                                   |
-+--------------------------------- Graziano Labs Corp. -+
++-------------------------------------- Graziano Labs Corp. -+
   Press any key to exit
 ```
 
@@ -53,11 +57,12 @@ Enable Terminal User Interface with real-time progress display.
 - Demonstrations or presentations
 - Real-time visibility into scanning status
 
-**Note on Error Visibility**: In TUI mode, stderr is suppressed to prevent display corruption. Use `--error-log` to capture errors.
+**Note on Error Visibility**: In TUI mode, stderr is suppressed to prevent display corruption. </br>
+Use `--error-log` to capture errors.
 
 ---
 
-## `--pqc-report FILE` (v1.2+)
+## `--pqc-report FILE`  
 
 Generate comprehensive PQC migration report in human-readable text format.
 
