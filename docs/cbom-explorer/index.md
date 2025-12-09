@@ -99,7 +99,9 @@ Test files are included in `cbom-explorer/test-cases/`:
 
 Verify your file is valid CycloneDX:
 ```
-cat your-cbom.json | jq '.specVersion'
+cat your-cbom.json | jq '.bomFormat'
+# Should output: "CycloneDX"
+
 ```
 Should output: "CycloneDX"
 
