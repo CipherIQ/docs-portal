@@ -16,6 +16,7 @@ Expert features for power users and automation.
 | [Filtering Output](filtering-output.md) | jq queries for analysis |
 | [Generating Reports](generating-reports.md) | Custom report generation |
 | [Container Scanning](container-scanning.md) | Container scanning workflow |
+| [Cross-archicture Scanning](cross-architecture.md) | Cross-architecture scanning workflow |
 
 
 ## Automation Examples

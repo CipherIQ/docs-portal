@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Best Practices
 
 Recommended usage patterns for CBOM Generator.
 
----
 
 ## Privacy Mode
 
@@ -62,7 +65,7 @@ This allows:
 - Consistent pseudonyms across scans
 - Cross-organization correlation
 - Reproducible results
-
+>NOTE: This is a v2.0 feature, currently disabled.
 ---
 
 ## Schema Validation
@@ -71,11 +74,11 @@ This allows:
 
 ```bash
 # Generate CBOM
-./build/cbom-generator --output cbom.json
+./build/cbom-generator --output cbom.json --cyclonedx-spec 1.7
 
-# Validate
-cyclonedx validate --input cbom.json
 ```
+
+>NOTE: current tools target 1.6 and the `cbom-generator` targets compliance with 1.7.
 
 ---
 

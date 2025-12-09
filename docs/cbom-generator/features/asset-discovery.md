@@ -1,8 +1,13 @@
+---
+hide:
+  - toc
+---
 # Asset Discovery
 
-The CBOM Generator includes 8 scanner types that discover cryptographic assets across your system.
+The CBOM Generator includes 8 scanner types that discover cryptographic assets across your system. Each scanner uses a different strategy to find specific types of assets.
 
----
+Understanding these strategies helps you target your scans effectively and interpret results correctly.
+
 
 ## Scanner Overview
 
@@ -19,24 +24,157 @@ The CBOM Generator includes 8 scanner types that discover cryptographic assets a
 
 ---
 
-## File Counts vs Component Counts
+## How Directories Affect Discovery
 
-The TUI displays both **file counts** (files examined) and **component counts** (assets discovered). These differ significantly:
+When you run the CBOM Generator, you specify one or more directories to scan:
 
-**Example** (scanning /home with 4.23M files):
-```
-Certificate Scanner: 4,122,000 files examined (97.4%)
-Key Scanner:         4,126,000 files examined (97.5%)
-Filesystem Scanner:  1,525,000 files examined (36% - crypto files only)
+```bash
+./cbom-generator /usr/sbin /etc/ssl
 ```
 
-**Why counts differ**:
+However, not all scanners use these directories in the same way.
 
-- Certificate/Key scanners examine EVERY file (comprehensive search)
-- Filesystem scanner pre-filters by extension (efficient search)
-- Both strategies are correct for their use cases
+### Scanners That Use Your Directories
+
+These scanners search only the directories you specify:
+
+| Scanner | What Happens |
+|---------|-------------|
+| **Certificate** | Searches your directories for certificate files |
+| **Key** | Searches your directories for key files |
+| **Filesystem** | Catalogs crypto-related files in your directories |
+| **Application** | Analyzes executables in your directories |
+
+If you scan `/opt/myapp`, these scanners will only look inside `/opt/myapp`.
+
+### Scanners That Ignore Your Directories
+
+These scanners query system-wide resources regardless of what directories you specify:
+
+| Scanner | What Happens |
+|---------|-------------|
+| **Package** | Queries your package manager (apt, rpm, pacman) for installed crypto packages |
+| **Service** | Detects running services and their crypto configurations |
+
+Even if you only scan `/home/user/myapp`, these scanners will still report all crypto packages installed on your system and all running crypto services.
+
+### Scanners That Derive Information
+
+These scanners don't search directories directly. They analyze assets found by other scanners:
+
+| Scanner | What Happens |
+|---------|-------------|
+| **Library** | Identifies crypto libraries used by applications and services |
+| **Algorithm** | Extracts algorithms from certificates, keys, and configurations |
 
 ---
+
+## Controlling Scanner Behavior
+
+### Enable Service Discovery Plugins
+
+The `--discover-services` flag activates plugin-based service detection, which provides deeper analysis of service configurations:
+
+```bash
+./cbom-generator --discover-services /usr/sbin /etc
+```
+
+This enables detection of 69+ services with detailed protocol and cipher suite extraction.
+
+### Specify Plugin Directory
+
+Use `--plugin-dir` to load service plugins from a custom location:
+
+```bash
+./cbom-generator --discover-services --plugin-dir plugins/embedded /usr/sbin
+```
+
+The `plugins/embedded/` directory contains plugins for IoT and embedded systems.
+
+### Use a Custom Crypto Registry
+
+The `--crypto-registry` flag loads custom library definitions:
+
+```bash
+./cbom-generator --crypto-registry registry/crypto-registry-alpine.yaml /usr/bin
+```
+
+This helps identify crypto libraries in non-standard environments like Alpine Linux containers.
+
+### Skip Package Manager Queries
+
+Use `--cross-arch` when scanning foreign filesystems (containers, mounted images):
+
+```bash
+./cbom-generator --cross-arch /mnt/container-rootfs
+```
+
+Or use `--no-package-resolution` for faster scans:
+
+```bash
+./cbom-generator --no-package-resolution /etc/ssl
+```
+
+---
+
+## Practical Examples
+
+### Scan a Specific Application
+
+```bash
+./cbom-generator /opt/myapp
+```
+
+Finds certificates, keys, and crypto dependencies within `/opt/myapp`. System packages and services are also reported.
+
+### Full System Inventory
+
+```bash
+./cbom-generator --discover-services /usr /etc /home
+```
+
+Comprehensive scan combining file discovery with detailed service analysis.
+
+### Container Image
+
+```bash
+docker export mycontainer | tar -xf - -C /tmp/container-fs
+
+./cbom-generator \
+    --cross-arch \
+    --crypto-registry registry/crypto-registry-alpine.yaml \
+    /tmp/container-fs
+
+rm -rf /tmp/container-fs
+```
+
+### Embedded System (Yocto/OpenWrt)
+
+```bash
+./cbom-generator \
+    --cross-arch \
+    --discover-services \
+    --plugin-dir plugins/embedded \
+    /mnt/rootfs/usr /mnt/rootfs/etc
+```
+
+---
+
+## What Each Scanner Contributes
+
+| Scanner | Primary Output | Additional Output |
+|---------|---------------|-------------------|
+| Certificate | Certificates | Signature algorithms |
+| Key | Keys | Key algorithms |
+| Filesystem | File inventory | File classifications |
+| Application | Applications | Library relationships |
+| Package | Installed packages | Version information |
+| Service | Services | Protocols |
+| Library | Libraries | Algorithm capabilities |
+| Algorithm | — | Collected from all sources |
+
+
+
 
 ## Certificate Scanner
 
@@ -166,3 +304,33 @@ Algorithms are **derived components** extracted from other assets:
 
 **From Libraries**:
 - Algorithm capabilities from crypto registry
+
+## Common Questions
+
+**Why do I see system packages when I only scanned a specific directory?**
+
+The Package Scanner always queries your system's package manager. It reports all installed crypto packages regardless of which directories you specify.
+
+**How do I scan only files without system-wide information?**
+
+Use `--no-package-resolution` to skip package manager queries. Note that service detection still runs.
+
+**What's the difference between basic and plugin-based service detection?**
+
+Without `--discover-services`, only common services (Apache, nginx, OpenSSH) are detected with basic information. With the flag enabled, 69+ services can be detected with detailed cipher suite extraction.
+
+**Why does the same library appear multiple times?**
+
+Libraries may be found both through package manager queries and through binary analysis. The system merges duplicates when possible.
+
+---
+
+## See Also
+
+- [Container Scanning](../advanced/container-scanning.md) - Scanning Docker and Podman containers
+- [Cross-Architecture Scanning](CROSS_ARCH_SCANNING.md) - Scanning Yocto and embedded systems
+- [Plugin Guide](PLUGIN_GUIDE.md) - Creating custom service plugins
+
+
+
+---

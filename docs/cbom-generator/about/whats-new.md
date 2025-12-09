@@ -1,10 +1,14 @@
+---
+hide:
+  - toc
+---
 # What's New
 
 Release highlights for CBOM Generator.
 
----
 
-## v1.9.0 (December 2025)
+
+## v1.9.3 (December 2025)
 
 ### Crypto Registry Extension
 
@@ -25,19 +29,11 @@ Release highlights for CBOM Generator.
 - **Symbol analysis** for embedded crypto
 - **Improved PQC classification** for alternate-detected apps
 
----
-
-## v1.6.0 (November 2025)
-
 ### Extensible Crypto Registry
 
 - **YAML configuration** for crypto library definitions
 - **Built-in registry**: OpenSSL, libgcrypt, libsodium, nettle, Kerberos
 - **Graceful fallback** on YAML errors
-
----
-
-## v1.3.0 (November 2025)
 
 ### YAML Plugin Architecture
 
@@ -52,9 +48,6 @@ Release highlights for CBOM Generator.
 - **6 config parsers**: INI, Apache, Nginx, YAML, JSON, OpenSSL cipher
 - **Full dependency graph**: SERVICE→PROTOCOL→SUITE→ALGORITHM
 
----
-
-## v1.2.0 (November 2025)
 
 ### PQC Assessment Enhancements
 
@@ -63,23 +56,12 @@ Release highlights for CBOM Generator.
 - **Per-component rationale**: Explains classification
 - **Hybrid detection**: X25519-ML-KEM-768
 
----
-
-## v1.1.0 (November 2025)
 
 ### Schema Compliance
 
-- **100% CycloneDX validation** pass rate
+- **100% CycloneDX 1.7 validation** pass rate
 - **Human-readable bom-refs**: `cert:digicert-root-ca`
 - **Zero hash collisions**
-
-### Deprecated
-
-- Epoch timestamps (use ISO-8601)
-
----
-
-## v1.0.0 (November 2025)
 
 ### Initial Release
 

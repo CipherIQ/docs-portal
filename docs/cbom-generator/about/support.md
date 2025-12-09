@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Support
 
 Getting help with CBOM Generator.
 
----
 
 ## Getting Help
 
@@ -26,8 +29,7 @@ Getting help with CBOM Generator.
 
 ### GitHub Issues
 
-Report bugs and feature requests at:
-https://github.com/your-org/cryptoBOM/issues
+Report bugs and feature requests at: [https://github.com/CipherIQ/cbom-generator/issues](https://github.com/CipherIQ/cbom-generator/issues)
 
 ### Issue Template
 
@@ -41,24 +43,6 @@ When reporting issues, include:
 
 ---
 
-## Technical Documentation
-
-### Design Documents
-
-- `docs/DESIGN.md` - Technical architecture
-- `docs/REQUIREMENTS.md` - Formal requirements
-- `docs/NORMALIZATION.md` - Asset ID generation
-
-### Plugin Development
-
-- `docs/PLUGIN_GUIDE.md` - Plugin development guide
-- `docs/PLUGIN_YAML_FORMAT.md` - YAML plugin schema
-
-### API Documentation
-
-- `include/*.h` - Header files with API documentation
-
----
 
 ## External References
 
@@ -91,14 +75,14 @@ For commercial licensing options, contact: sales@cipheriq.io
 
 ## Contributing
 
-Contributions are welcome! See `CONTRIBUTING.md` for guidelines.
+Contributions are welcome! See [CONTRIBUTING](https://github.com/CipherIQ/cbom-generator/blob/main/CONTRIBUTING.md) for guidelines.
 
 ### Development Setup
 
 ```bash
 # Clone repository
-git clone https://github.com/your-org/cryptoBOM.git
-cd cryptoBOM
+git clone https://github.com/CipherIQ/cbom-generator.git
+cd cbom-generator
 
 # Build debug version
 cmake -B build-debug -DCMAKE_BUILD_TYPE=Debug
@@ -114,6 +98,17 @@ cd build-debug && ctest
 
 - **Technical Support**: support@cipheriq.io
 - **Sales**: sales@cipheriq.io
-- **GitHub**: https://github.com/your-org/cryptoBOM
+- **GitHub**: [https://github.com/CipherIQ/cbom-generator](https://github.com/CipherIQ/cbom-generator)
 
 Copyright (c) 2025 Graziano Labs Corp.
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].hostname !== window.location.hostname) {
+      links[i].target = '_blank';
+      links[i].rel = 'noopener noreferrer';
+    }
+  }
+});
+</script>

@@ -102,6 +102,7 @@ nav:
       - Filtering Output: cbom-generator/advanced/filtering-output.md
       - Generating Reports: cbom-generator/advanced/generating-reports.md
       - Container Scanning: cbom-generator/advanced/container-scanning.md
+      - Cross-Architecture Scanning: cbom-generator/advanced/cross-architecture.md
     - Reference:
       - CLI Syntax: cbom-generator/reference/cli-syntax.md
       - Output Format: cbom-generator/reference/output-format.md
