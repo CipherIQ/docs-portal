@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Privacy Controls
 
-CBOM Generator implements privacy-by-default for GDPR/CCPA compliance.
+The CBOM Generator implements privacy-by-default for GDPR/CCPA compliance.
 
----
 
 ## Privacy-by-Default
 
@@ -40,6 +43,7 @@ CBOM Generator uses salted hashing for consistent pseudonymization:
 export CBOM_SALT="my-organization-specific-salt-value"
 ./build/cbom-generator --no-personal-data --output cbom.json
 ```
+>NOTE: User defined salt will be implemented in v2.0
 
 ---
 
@@ -95,6 +99,7 @@ User SSH configs (`~/.ssh/config`) are only scanned with `--include-personal-dat
 | `--include-personal-data` | Scanned for all users in /home/* |
 
 **Rationale**: User SSH configs reveal:
+
 - Individual cryptographic preferences
 - Non-public KEX algorithm choices
 - Personal security configurations

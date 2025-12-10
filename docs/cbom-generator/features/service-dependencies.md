@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # Service Dependencies
 
 The Service Discovery Scanner automatically detects running services and maps their complete cryptographic dependency chains.
 
----
+
 
 ## 4-Level Dependency Architecture
 

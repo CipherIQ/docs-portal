@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Relationship Graph
 
 The CBOM Generator builds a complete dependency graph showing how cryptographic components relate to each other.
 
----
 
 ## Relationship Types
 

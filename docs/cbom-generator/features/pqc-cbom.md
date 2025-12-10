@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-# PQC Classification in CBOM Output
+# PQC in CBOM Output
 
 ## Overview
 
@@ -125,7 +125,7 @@ Break year indicates when an algorithm is expected to become vulnerable to quant
 The PQC readiness score (0-100%) is calculated as:
 
 ```
-score = (SAFE×100 + TRANSITIONAL×50 + DEPRECATED×0 + UNSAFE×0) / total
+score = (SAFE×100 + TRANSITIONAL×50 + DEPRECATED×20 + UNSAFE×0) / total
 ```
 
 ---
@@ -411,7 +411,7 @@ References to relevant compliance frameworks and deadlines.
 The PQC readiness score (0-100%) is calculated as:
 
 ```
-score = (SAFE×100 + TRANSITIONAL×50 + DEPRECATED×0 + UNSAFE×0) / total
+score = (SAFE×100 + TRANSITIONAL×50 + DEPRECATED×20 + UNSAFE×0) / total
 ```
 
 

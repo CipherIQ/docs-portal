@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Protocol Properties
 
 The Protocol Analysis module extracts detailed cryptographic protocol configurations from services.
 
----
 
 ## Supported Protocol Types
 
@@ -15,6 +18,7 @@ The Protocol Analysis module extracts detailed cryptographic protocol configurat
 | **QUIC** | Quick UDP Internet Connections | Modern web servers |
 | **WireGuard** | WireGuard VPN | WireGuard configs |
 | **OpenVPN** | OpenVPN protocol | OpenVPN configs |
+
 
 ---
 
@@ -38,15 +42,61 @@ Protocols track which TLS versions are enabled:
 
 ---
 
-## TLS Version Analysis
+## Protocol Classification
 
-| Version | Status | Risk Level |
-|---------|--------|------------|
-| TLS 1.3 | Current | Safe |
-| TLS 1.2 | Supported | Safe (with modern ciphers) |
-| TLS 1.1 | Deprecated | **HIGH RISK** |
-| TLS 1.0 | Deprecated | **HIGH RISK** |
-| SSLv3 | Obsolete | **CRITICAL** |
+TLS and SSH protocols receive special handling because their security depends on the key exchange algorithm, not just the protocol version or cipher suite.
+
+### TLS Protocol Classification
+
+The classifier evaluates TLS protocols based on version and key exchange configuration:
+
+| Protocol | Status |  Rationale |
+|----------|--------|----------------|
+| TLS with PQC-hybrid KEX (Kyber, ML-KEM, X25519Kyber) | **SAFE** | PQC-hybrid key exchange |
+| TLS 1.3 (without PQC hybrid) | **TRANSITIONAL** | TLS 1.2/1.3: quantum-safe symmetric (AES-GCM), vulnerable KEX (ECDHE) |
+| TLS 1.2 (without PQC hybrid) | **TRANSITIONAL** | Same as TLS 1.3 - KEX is the vulnerability |
+| TLS 1.1 | **DEPRECATED** | TLS 1.0/1.1 and SSLv3: deprecated protocols with known vulnerabilities |
+| TLS 1.0 | **DEPRECATED** | Same - classical attacks (BEAST, etc.) + quantum-vulnerable |
+| SSLv3 | **DEPRECATED** | Completely broken classically (POODLE) |
+
+
+### TLS Cipher Suite Classification
+
+Individual cipher suites are classified based on their components:
+
+| Cipher Suite Pattern | Status |  Rationale |
+|---------------------|--------|----------------|
+| TLS 1.3 suites (`TLS_AES_*`, `TLS_CHACHA20_*`) | **TRANSITIONAL** | TLS 1.3 with classical KEX (X25519/ECDHE) - TRANSITIONAL for service |
+| Contains `ECDHE` or `DHE` | **TRANSITIONAL** | Good forward secrecy but classical KEX |
+| RSA key transport (no ECDHE/DHE) | **TRANSITIONAL** | RSA key transport (no forward secrecy) - still TRANSITIONAL for now |
+| Contains `RC4`, `DES`, `NULL`, `EXPORT`, `MD5`, `3DES` | **DEPRECATED** | Classically broken ciphers |
+| Default (other patterns) | **TRANSITIONAL** | Default assumption |
+
+
+### SSH Protocol Classification
+
+SSH protocols are classified based on their key exchange algorithms:
+
+| Configuration | Status |  Rationale |
+|---------------|--------|----------------|
+| SSH with `sntrup761x25519` | **SAFE** | PQC-hybrid KEX (NTRU-Prime + X25519) |
+| SSH with `ntruprime` or `Kyber` | **SAFE** | Uses quantum-resistant key exchange |
+| SSH with curve25519/ECDH | **TRANSITIONAL** | quantum-safe symmetric, vulnerable KEX |
+
+
+### Design Decision: Why RSA Key Transport is TRANSITIONAL
+
+The code classifies RSA key transport cipher suites as **TRANSITIONAL** (not UNSAFE), even though they lack forward secrecy. 
+
+This CBOM Generator treats RSA key transport equivalently to ECDHE for PQC classification because:
+
+1. **Both are quantum-vulnerable**: Shor's algorithm can break both RSA and ECDHE
+2. **Separate concerns**: Forward secrecy is a separate property from PQC readiness
+3. **TRANSITIONAL = plan migration**: Both require migration to PQC, which is the primary concern
+
+**Note:** Organizations with strict "harvest-now-decrypt-later" concerns may want to prioritize disabling RSA key transport before ECDHE suites.
+
+
 
 ---
 
