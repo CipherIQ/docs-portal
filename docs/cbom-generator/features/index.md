@@ -1,6 +1,10 @@
+---
+hide:
+  - toc
+---
 # Features
 
-CBOM Generator provides comprehensive cryptographic asset discovery and analysis capabilities.
+The CBOM Generator provides comprehensive cryptographic asset discovery and analysis capabilities.
 
 ## Core Features
 
@@ -19,21 +23,18 @@ CBOM Generator provides comprehensive cryptographic asset discovery and analysis
 
 CBOM Generator includes 8 scanner types:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    CBOM Generator                            │
-├─────────────────────────────────────────────────────────────┤
-│  Scanners                                                    │
-│  ├── Certificate Scanner (X.509, OpenPGP)                   │
-│  ├── Key Scanner (RSA, ECDSA, Ed25519, DSA, DH)            │
-│  ├── Package Scanner (APT, RPM, pip, npm)                   │
-│  ├── Service Scanner (Apache, Nginx, OpenSSH)               │
-│  ├── Filesystem Scanner (crypto-related files)              │
-│  ├── Application Scanner (binary dependency analysis)       │
-│  ├── Library Scanner (crypto library detection)             │
-│  └── Algorithm Detection (derived from all sources)         │
-└─────────────────────────────────────────────────────────────┘
-```
+| Scanner | Strategy | What It Finds |
+|---------|----------|---------------|
+| Certificate | Every file | X.509, OpenPGP certificates |
+| Key | Every file | RSA, ECDSA, Ed25519, DSA, DH keys |
+| Package | System-wide | Crypto libraries via package managers |
+| Service | System-wide | Network services using crypto |
+| Filesystem | Filtered | Crypto-related files by extension |
+| Application | Binary analysis | Applications with crypto dependencies |
+| Library | Integrated | Crypto libraries linked to apps |
+| Algorithm | Derived | Algorithms from all sources |
+
+
 
 ## Component Types
 

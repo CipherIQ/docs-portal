@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Deduplication
 
 Control how duplicate cryptographic assets are handled in the CBOM output.

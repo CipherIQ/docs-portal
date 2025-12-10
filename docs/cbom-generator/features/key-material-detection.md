@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Key Material Detection
 
 The Key Material Scanner provides comprehensive discovery and security analysis of cryptographic keys.
