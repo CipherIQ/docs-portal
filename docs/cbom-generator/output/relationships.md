@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # Relationships Array
 
 The `relationships` array provides typed edges with confidence scores.
 
----
+
 
 ## Structure
 

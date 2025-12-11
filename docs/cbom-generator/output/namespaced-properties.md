@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Namespaced Properties (cbom:*)
 
 Extended properties using the `cbom:*` namespace provide additional detail.
 
----
 
 ## Algorithm Properties
 

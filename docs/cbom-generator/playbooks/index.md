@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Playbooks
 
 Step-by-step migration guides for common cryptographic transitions.

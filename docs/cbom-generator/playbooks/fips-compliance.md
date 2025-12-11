@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # FIPS Compliance Validation
 
 Validate FIPS 140-2/3 compliance using CBOM Generator.
 
----
+
 
 ## Overview
 
@@ -232,7 +236,7 @@ The NIST Cryptographic Module Validation Program (CMVP) validates cryptographic 
 
 ### Check for Validated Modules
 
-Visit: https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules
+Visit: [https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules)
 
 Common validated modules:
 - OpenSSL FIPS Provider
@@ -242,18 +246,6 @@ Common validated modules:
 
 ---
 
-## Success Criteria
-
-- [ ] No deprecated algorithms (MD5, SHA-1, DES, RC4)
-- [ ] All RSA keys >= 2048 bits
-- [ ] All ECDSA keys >= P-256
-- [ ] FIPS-approved cipher suites only
-- [ ] FIPS provider enabled (OpenSSL 3.0+)
-- [ ] Audit report generated
-- [ ] Documentation for compliance evidence
-
----
-
 ## Important Note
 
-CBOM Generator provides **stub metadata** for FIPS certification status. Actual FIPS validation must be verified against the NIST CMVP database and your organization's compliance requirements.
+The CBOM Generator provides **stub metadata** for FIPS certification status. Actual FIPS validation must be verified against the NIST CMVP database.

@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Getting Started
 
 This section helps you install CBOM Generator and run your first scan.

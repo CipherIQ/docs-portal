@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # TLS Upgrade Guide
 
-Migrate from deprecated TLS 1.0/1.1 to TLS 1.2/1.3 for improved security.
+Migrate from unsafe and deprecated TLS 1.0/1.1 to TLS 1.2/1.3 for improved security.
 
----
 
 ## Prerequisites
 
@@ -228,11 +231,3 @@ sudo systemctl restart nginx
 ```
 
 ---
-
-## Success Criteria
-
-- [ ] No TLS 1.0/1.1 protocols enabled
-- [ ] All services use TLS 1.2+ minimum
-- [ ] No weak cipher suites (RC4, DES, 3DES)
-- [ ] CBOM shows MODERN or INTERMEDIATE security profiles
-- [ ] External validation passes (SSL Labs A rating)

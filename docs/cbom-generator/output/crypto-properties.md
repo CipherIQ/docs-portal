@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Crypto Properties
 
 The `cryptoProperties` block contains CycloneDX CBOM-specific fields.
 
----
 
 ## algorithmProperties
 

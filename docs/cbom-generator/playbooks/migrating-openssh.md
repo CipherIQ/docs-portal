@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # OpenSSH PQC Migration
 
 Enable Post-Quantum key exchange in OpenSSH to protect against future quantum computer attacks.
 
----
+
 
 ## Prerequisites
 
@@ -188,11 +192,3 @@ sudo systemctl restart sshd
 When connecting to systems with older OpenSSH, the hybrid KEX will fall back gracefully to curve25519-sha256.
 
 ---
-
-## Success Criteria
-
-- [ ] sshd_config contains sntrup761 as first KEX algorithm
-- [ ] SSH service restart successful
-- [ ] CBOM shows sshd with `cbom:pqc:status = SAFE`
-- [ ] Test connection shows sntrup761 KEX negotiation
-- [ ] PQC readiness score improved

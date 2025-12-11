@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Installation
 
 ## Prerequisites
@@ -35,8 +39,8 @@ sudo yum install gcc cmake openssl-devel json-c-devel libcurl-devel \
 
 ```bash
 # Clone repository
-git clone https://github.com/your-org/cryptoBOM.git
-cd cryptoBOM
+git clone https://github.com/CipherIQ/cbom-generator.git
+cd cbom-generator
 
 # Configure for release build
 cmake -B build -DCMAKE_BUILD_TYPE=Release

@@ -1,8 +1,12 @@
+---
+hide:
+  - toc
+---
 # Quick Start
 
 Run your first CBOM scan in minutes.
 
----
+
 
 ## Basic System Scan
 
@@ -16,6 +20,7 @@ Run your first CBOM scan in minutes.
 # Generate CycloneDX format
 ./build/cbom-generator --format cyclonedx --output cbom.cdx.json
 ```
+>NOTE: If you run `cbom-generator` with no arguments, it scans the current working directory.
 
 ---
 
@@ -67,10 +72,11 @@ Discover running services and their cryptographic configurations:
 ```
 
 This scans:
+
 - Running processes (nginx, apache, sshd, etc.)
 - Configuration files (TLS settings, cipher suites)
 - Network endpoints (listening ports, protocols)
-
+- The current directory (recursively)
 ---
 
 ## Scan Specific Directories
@@ -87,7 +93,7 @@ Focus on particular areas of your system:
 # Scan embedded rootfs (Yocto/Buildroot)
 ./build/cbom-generator --cross-arch --output rootfs-cbom.json /path/to/rootfs
 ```
-
+The scanner will recursively scan the directories provided as arguments up to 32 levels deep.
 ---
 
 ## Understanding the Output
@@ -120,6 +126,7 @@ CBOM Generator outputs JSON in CycloneDX format:
 ```
 
 Key sections:
+
 - **metadata**: Scan timestamp, totals, PQC readiness
 - **components**: Discovered cryptographic assets
 - **dependencies**: Relationships between components

@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Understanding Components
 
 Every component in the CBOM represents a cryptographic asset.
 
----
 
 ## Component Structure
 
@@ -25,25 +28,20 @@ Every component in the CBOM represents a cryptographic asset.
 
 ---
 
-## Human-Readable bom-refs (v1.1+)
+## Human-Readable `bom-refs`
 
-Starting in v1.1, bom-ref values are human-readable:
+`bom-ref` values are human-readable:
 
-**Before (v1.0)**:
-```json
-"bom-ref": "5db9813bf30c015aaf7c729a5f84c415d6b1a90bf090f1fceb..."
-```
-
-**After (v1.1)**:
 ```json
 "bom-ref": "cert:swisssign-gold-ca-g2"
 ```
 
-**Format by Asset Type**:
+**bom-ref Format by Component Category**:
 
 | Type | Format | Example |
 |------|--------|---------|
 | Certificate | `cert:<sanitized-cn>` | `cert:digicert-assured-id-root-ca` |
+| Certificate Request | `csr:<sanitized-cn>` | `csr:myserver-request` |
 | Algorithm | `algo:<algorithm>-<keysize>` | `algo:aes-256-gcm-256` |
 | Key | `key:<algorithm>-<keysize>-<hash>` | `key:rsa-2048-a1b2c3d4` |
 | Service | `service:<name>` | `service:apache-httpd` |
@@ -76,7 +74,9 @@ Has a `cryptoProperties` block:
 }
 ```
 
-**Asset Types**:
+**cryptoProperties.assetType Values**
+
+Components with `type: "cryptographic-asset"` have a `cryptoProperties` block with one of these `assetType` values:
 
 | assetType | Description | Example |
 |-----------|-------------|---------|
@@ -84,6 +84,9 @@ Has a `cryptoProperties` block:
 | `certificate` | X.509 certificate | CA root cert |
 | `related-crypto-material` | Key material | RSA-2048 key |
 | `protocol` | Communication protocol | TLS 1.3 |
+| `cipher-suite` | TLS/SSL cipher suite | TLS_AES_256_GCM_SHA384 |
+
+Other component types (`library`, `operating-system`, `application`) don't use `cryptoProperties`. See sections below.
 
 ### library
 

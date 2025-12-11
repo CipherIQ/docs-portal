@@ -74,13 +74,13 @@ nav:
       - Service Dependencies: cbom-generator/features/service-dependencies.md
       - Protocol Properties: cbom-generator/features/protocol-properties.md
       - PQC Classification: cbom-generator/features/pqc-classification.md
-      - PQC in CBOM: cbom-generator/features/pqc-cbom.md
       - Relationship Graph: cbom-generator/features/relationship-graph.md
       - Privacy Controls: cbom-generator/features/privacy-controls.md
       - Deduplication: cbom-generator/features/deduplication.md
     - Output Format:
       - cbom-generator/output/index.md
       - Components: cbom-generator/output/components.md
+      - PQC in CBOM: cbom-generator/features/pqc-cbom.md
       - Crypto Properties: cbom-generator/output/crypto-properties.md
       - Namespaced Properties: cbom-generator/output/namespaced-properties.md
       - Dependencies: cbom-generator/output/dependencies.md

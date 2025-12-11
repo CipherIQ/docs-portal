@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Dependencies Array
 
 The `dependencies` array shows provider/consumer relationships between components.
 
----
 
 ## Structure
 
@@ -40,14 +43,13 @@ The `dependencies` array shows provider/consumer relationships between component
 
 ---
 
-## Human-Readable References (v1.1+)
+## Human-Readable References 
+all refs use human-readable identifiers. 
 
-In v1.1 and later, all refs use human-readable identifiers:
+For instance:
 
-| Before (v1.0) | After (v1.1+) |
-|---------------|---------------|
-| `5db9813bf30c...` | `service:nginx` |
-| `a1b2c3d4e5f6...` | `algo:aes-256-gcm-256` |
+- `service:nginx` 
+- `algo:aes-256-gcm-256`
 
 This makes dependency graphs self-documenting.
 

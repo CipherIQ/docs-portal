@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Certificate Rotation
 
 Plan and execute certificate lifecycle management using CBOM Generator.
 
----
 
 ## Prerequisites
 
@@ -235,13 +238,3 @@ sudo systemctl restart apache2
 ```
 
 ---
-
-## Success Criteria
-
-- [ ] All expiring certificates identified
-- [ ] New certificates generated with adequate validity
-- [ ] Certificates deployed to correct locations
-- [ ] Services restarted successfully
-- [ ] CBOM shows new certificates as "active"
-- [ ] External connectivity verified
-- [ ] Monitoring in place for future expirations

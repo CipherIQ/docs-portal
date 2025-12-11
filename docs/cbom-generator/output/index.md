@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # CycloneDX CBOM Output
 
 Understanding the CBOM Generator output format.
 
----
 
 ## Top-Level Structure
 
