@@ -1,10 +1,10 @@
 # Output Formats
 
-crypto-tracer supports multiple output formats to suit different use cases, from real-time monitoring to human-readable reports.
+**crypto-tracer** supports multiple output formats to suit different use cases, from real-time monitoring to human-readable reports.
 
 ## Available Formats
 
-crypto-tracer provides four output formats:
+**crypto-tracer** provides four output formats:
 
 | Format | Description | Best For | Commands |
 |--------|-------------|----------|----------|

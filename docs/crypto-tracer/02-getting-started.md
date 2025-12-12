@@ -1,6 +1,6 @@
 # Quick Start
 
-This guide will help you get crypto-tracer up and running in just a few minutes.
+This guide will help you get **crypto-tracer** up and running in just a few minutes.
 
 ## Quick Start (5 Minutes)
 
@@ -94,7 +94,7 @@ grep CONFIG_BPF /boot/config-$(uname -r)
 
 ### Privileges
 
-Most crypto-tracer commands require elevated privileges to load eBPF programs:
+Most **crypto-tracer** commands require elevated privileges to load eBPF programs:
 
 - **CAP_BPF** capability (kernel 5.8+) - Recommended
 - **CAP_SYS_ADMIN** capability (older kernels) - Alternative
@@ -118,13 +118,13 @@ See the [Installation Guide](03-installation.md) for details on setting up privi
 - 1GB+ RAM
 - 50MB disk space
 
-crypto-tracer is designed to be lightweight and runs efficiently even on modest hardware.
+**crypto-tracer** is designed to be lightweight and runs efficiently even on modest hardware.
 
 ## First Steps
 
 ### Verify Installation
 
-Check that crypto-tracer is working:
+Check that **crypto-tracer** is working:
 
 ```bash
 # Check version
@@ -145,7 +145,7 @@ Try monitoring for a few seconds:
 sudo ./build/crypto-tracer monitor --duration 5
 ```
 
-If you see events, crypto-tracer is working correctly!
+If you see events, **crypto-tracer** is working correctly!
 
 ### Generate Test Activity
 
@@ -200,7 +200,7 @@ sudo lsof | grep -E "libssl|libcrypto" | head -5
 
 ## Next Steps
 
-Now that you have crypto-tracer running:
+Now that you have **crypto-tracer** running:
 
 1. **Learn the commands** - Read the [Commands Reference](05-commands-reference.md)
 2. **Set up privileges** - See [Installation](03-installation.md) to run without sudo
@@ -241,4 +241,4 @@ sudo ./crypto-tracer libs --duration 30
 
 ---
 
-**Previous:** [Introduction](index.md) | **Next:** [Installation](03-installation.md)
+**Previous:** [Introduction](01-introduction.md) | **Next:** [Installation](03-installation.md)

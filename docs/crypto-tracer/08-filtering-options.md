@@ -1,10 +1,10 @@
 # Filtering and Options
 
-This section covers all filtering capabilities and command-line options available in crypto-tracer.
+This section covers all filtering capabilities and command-line options available in **crypto-tracer**.
 
 ## Overview
 
-crypto-tracer provides powerful filtering to focus on specific processes, libraries, or files. Filters can be combined using AND logic - all specified filters must match for an event to be displayed.
+**crypto-tracer** provides powerful filtering to focus on specific processes, libraries, or files. Filters can be combined using AND logic - all specified filters must match for an event to be displayed.
 
 ## Process Filtering
 

@@ -1,10 +1,10 @@
 # Basic Concepts
 
-Understanding these core concepts will help you use crypto-tracer effectively.
+Understanding these core concepts will help you use **crypto-tracer** effectively.
 
 ## Event Types
 
-crypto-tracer generates several types of events as it monitors your system. Each event represents a specific cryptographic operation.
+**crypto-tracer** generates several types of events as it monitors your system. Each event represents a specific cryptographic operation.
 
 ### file_open Event
 
@@ -110,7 +110,7 @@ Triggered when a process terminates.
 
 ## File Type Classification
 
-crypto-tracer automatically classifies cryptographic files into categories:
+**crypto-tracer** automatically classifies cryptographic files into categories:
 
 ### certificate
 
@@ -152,11 +152,11 @@ Containers that hold multiple certificates and keys.
 
 Files with crypto-related extensions but unrecognized format.
 
-**Note:** crypto-tracer classifies files based on extension and, for `.pem` files, by reading the first few bytes to detect the header (CERTIFICATE vs PRIVATE KEY).
+**Note:** **crypto-tracer** classifies files based on extension and, for `.pem` files, by reading the first few bytes to detect the header (CERTIFICATE vs PRIVATE KEY).
 
 ## Crypto Libraries
 
-crypto-tracer recognizes these cryptographic libraries:
+**crypto-tracer** recognizes these cryptographic libraries:
 
 ### OpenSSL
 - **Libraries:** `libssl.so`, `libcrypto.so`
@@ -185,13 +185,14 @@ crypto-tracer recognizes these cryptographic libraries:
 
 ## Output Modes
 
-crypto-tracer operates in two distinct output modes depending on the command:
+**crypto-tracer** operates in two distinct output modes depending on the command:
 
 ### Stream Mode
 
 Used by: `monitor`, `libs`, `files` commands
 
 **Characteristics:**
+
 - Events output in real-time as they occur
 - One JSON object per line (json-stream format)
 - Continuous output until duration expires or Ctrl+C
@@ -215,6 +216,7 @@ sudo crypto-tracer monitor --duration 60 > events.json
 Used by: `profile`, `snapshot` commands
 
 **Characteristics:**
+
 - Complete JSON document generated at end
 - Aggregated statistics and summaries
 - Single output when command completes
@@ -240,13 +242,14 @@ sudo crypto-tracer profile --pid 1234 --duration 30 > profile.json
 
 ## Timestamps
 
-All timestamps in crypto-tracer use **ISO 8601 format with microsecond precision in UTC**:
+All timestamps in **crypto-tracer** use **ISO 8601 format with microsecond precision in UTC**:
 
 **Format:** `YYYY-MM-DDTHH:MM:SS.ffffffZ`
 
 **Example:** `2024-12-08T10:30:45.123456Z`
 
 **Components:**
+
 - `2024-12-08` - Date (YYYY-MM-DD)
 - `T` - Separator between date and time
 - `10:30:45` - Time (HH:MM:SS)
@@ -264,16 +267,18 @@ python3 -c "from datetime import datetime; print(datetime.fromisoformat('2024-12
 
 ## Filtering Concepts
 
-crypto-tracer supports multiple types of filters that can be combined:
+**crypto-tracer** supports multiple types of filters that can be combined:
 
 ### Process Filters
 
 **By PID (Process ID):**
+
 - Exact match on process ID
 - Only monitors that specific process
 - **Limitation:** Child processes have different PIDs
 
 **By Name:**
+
 - Substring match on process name
 - Monitors all processes with matching names
 - Catches child processes with same name
@@ -286,6 +291,7 @@ crypto-tracer supports multiple types of filters that can be combined:
 - Matches any part of the library path
 
 **Example:** `--library libssl` matches:
+
 - `/usr/lib/libssl.so`
 - `/usr/lib/x86_64-linux-gnu/libssl.so.1.1`
 - `/opt/openssl/lib/libssl.so.3`
@@ -297,12 +303,14 @@ crypto-tracer supports multiple types of filters that can be combined:
 - Case-sensitive
 
 **Glob patterns:**
+
 - `*` - Matches any characters
 - `?` - Matches single character
 - `[abc]` - Matches a, b, or c
 - `[a-z]` - Matches range
 
 **Examples:**
+
 - `*.pem` - All .pem files
 - `/etc/ssl/*` - All files in /etc/ssl/
 - `*server*` - Files containing "server"
@@ -317,12 +325,13 @@ sudo crypto-tracer monitor --name nginx --file "*.pem"
 ```
 
 This will only show events where:
+
 - Process name contains "nginx" AND
 - File path matches "*.pem"
 
 ## Privacy and Redaction
 
-crypto-tracer protects sensitive information by default through path redaction.
+**crypto-tracer** protects sensitive information by default through path redaction.
 
 ### Default Behavior (Redaction Enabled)
 
@@ -351,18 +360,20 @@ sudo crypto-tracer monitor --no-redact
 ```
 
 **When to disable:**
+
 - Debugging specific path issues
 - When privacy is not a concern
 - For detailed troubleshooting
 
 **When to keep enabled:**
+
 - Sharing output with others
 - Compliance and audit reports
 - Public demonstrations
 
 ## Performance Characteristics
 
-Understanding crypto-tracer's performance helps set expectations:
+Understanding **crypto-tracer**'s performance helps set expectations:
 
 ### CPU Usage
 - **Average:** <0.5% per core

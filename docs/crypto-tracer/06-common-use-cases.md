@@ -1,6 +1,6 @@
 # Common Use Cases
 
-This section provides practical examples of using crypto-tracer to solve real-world problems.
+This section provides practical examples of using **crypto-tracer** to solve real-world problems.
 
 ## Use Case 1: Debug SSL/TLS Certificate Issues
 

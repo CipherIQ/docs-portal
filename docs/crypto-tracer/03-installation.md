@@ -1,10 +1,10 @@
 # Installation Guide
 
-This guide covers installing crypto-tracer on your system, including setting up the necessary privileges.
+This guide covers installing **crypto-tracer** on your system, including setting up the necessary privileges.
 
 ## Installation Options
 
-You can install crypto-tracer in two ways:
+You can install **crypto-tracer** in two ways:
 
 1. **Using a pre-built binary** (recommended for most users)
 2. **Building from source** (for developers or custom builds)
@@ -111,11 +111,11 @@ The static build is recommended for distribution as it works across different Li
 
 ## Setting Up Privileges
 
-crypto-tracer needs special privileges to load eBPF programs. You have three options:
+**crypto-tracer** needs special privileges to load eBPF programs. You have three options:
 
 ### Option 1: Run with sudo (Simplest)
 
-The simplest approach is to run crypto-tracer with sudo:
+The simplest approach is to run **crypto-tracer** with sudo:
 
 ```bash
 sudo crypto-tracer monitor
@@ -208,7 +208,7 @@ uname -r
 
 ### Important Notes About Capabilities
 
-1. **Capabilities are tied to the binary file** - If you rebuild or update crypto-tracer, you must re-grant capabilities
+1. **Capabilities are tied to the binary file** - If you rebuild or update **crypto-tracer**, you must re-grant capabilities
 
 2. **Automate capability granting** - Create a script for convenience:
    ```bash
@@ -383,7 +383,7 @@ ls -la /sys/kernel/btf/vmlinux
 
 ## Next Steps
 
-Now that crypto-tracer is installed:
+Now that **crypto-tracer** is installed:
 
 1. **Learn basic concepts** - Read [Basic Concepts](04-basic-concepts.md)
 2. **Explore commands** - See [Commands Reference](05-commands-reference.md)

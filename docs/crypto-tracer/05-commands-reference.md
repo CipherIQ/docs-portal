@@ -1,10 +1,10 @@
 # Commands Reference
 
-This section provides detailed documentation for all crypto-tracer commands.
+This section provides detailed documentation for all **crypto-tracer** commands.
 
 ## Command Overview
 
-crypto-tracer provides five main commands for different monitoring scenarios:
+**crypto-tracer** provides five main commands for different monitoring scenarios:
 
 | Command | Purpose | Privileges | Output Mode |
 |---------|---------|------------|-------------|

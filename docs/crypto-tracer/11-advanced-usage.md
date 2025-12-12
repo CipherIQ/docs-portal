@@ -1,12 +1,12 @@
 # Advanced Usage
 
-This section covers advanced techniques for scripting, automation, and sophisticated analysis with crypto-tracer.
+This section covers advanced techniques for scripting, automation, and sophisticated analysis with **crypto-tracer**.
 
 ## Scripting and Automation
 
 ### Monitor in Background
 
-Run crypto-tracer in the background while performing other tasks.
+Run **crypto-tracer** in the background while performing other tasks.
 
 ```bash
 # Start monitoring in background
@@ -192,7 +192,7 @@ jobs:
 
 ## Processing Output with jq
 
-jq is essential for analyzing crypto-tracer JSON output.
+jq is essential for analyzing **crypto-tracer** JSON output.
 
 ### Extract Specific Fields
 
@@ -400,7 +400,7 @@ echo "24-hour monitoring complete"
 
 ### Monitor with Automatic Restart
 
-Ensure monitoring continues even if crypto-tracer exits.
+Ensure monitoring continues even if **crypto-tracer** exits.
 
 ```bash
 #!/bin/bash

@@ -1,12 +1,12 @@
 # Privacy and Security
 
-crypto-tracer is designed with privacy and security as core principles. This section explains the privacy features and security considerations.
+**crypto-tracer** is designed with privacy and security as core principles. This section explains the privacy features and security considerations.
 
 ## Privacy Features
 
 ### Automatic Path Redaction
 
-crypto-tracer protects sensitive information by default through automatic path redaction.
+**crypto-tracer** protects sensitive information by default through automatic path redaction.
 
 #### Default Behavior (Redaction Enabled)
 
@@ -62,7 +62,7 @@ sudo crypto-tracer monitor --no-redact
 
 ### What is Never Logged
 
-crypto-tracer is designed to capture only metadata, never sensitive content:
+**crypto-tracer** is designed to capture only metadata, never sensitive content:
 
 **Never Logged:**
 
@@ -86,7 +86,7 @@ crypto-tracer is designed to capture only metadata, never sensitive content:
 
 ### Data Minimization
 
-crypto-tracer follows data minimization principles:
+**crypto-tracer** follows data minimization principles:
 
 1. **Only crypto-related events** - Filters out non-crypto activity
 2. **Metadata only** - Never reads file content
@@ -98,7 +98,7 @@ crypto-tracer follows data minimization principles:
 
 ### Read-Only Operation
 
-crypto-tracer operates in read-only mode:
+**crypto-tracer** operates in read-only mode:
 
 **What it does:**
 
@@ -136,7 +136,7 @@ All eBPF programs are verified by the Linux kernel for safety:
 
 ### Privilege Requirements
 
-crypto-tracer requires elevated privileges to load eBPF programs:
+**crypto-tracer** requires elevated privileges to load eBPF programs:
 
 **Required Capabilities:**
 
@@ -161,7 +161,7 @@ crypto-tracer requires elevated privileges to load eBPF programs:
 
 ### No System Modifications
 
-crypto-tracer makes no persistent changes:
+**crypto-tracer** makes no persistent changes:
 
 **Temporary (While Running):**
 
@@ -299,7 +299,7 @@ crypto-tracer makes no persistent changes:
 
 ## Security Checklist
 
-Before deploying crypto-tracer:
+Before deploying **crypto-tracer**:
 
 - [ ] Understand what data is collected
 - [ ] Review privacy implications
@@ -386,7 +386,7 @@ Before deploying crypto-tracer:
 
 ## Reporting Security Issues
 
-If you discover a security issue in crypto-tracer:
+If you discover a security issue in **crypto-tracer**:
 
 **Do:**
 

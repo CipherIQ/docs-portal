@@ -2,7 +2,7 @@
 
 ## What is crypto-tracer?
 
-crypto-tracer is a standalone command-line tool for monitoring and analyzing cryptographic operations on Linux systems. It uses eBPF (Extended Berkeley Packet Filter) technology to observe crypto-related activity at the kernel level with minimal performance impact.
+**crypto-tracer** is a standalone command-line tool for monitoring and analyzing cryptographic operations on Linux systems. It uses eBPF (Extended Berkeley Packet Filter) technology to observe crypto-related activity at the kernel level with minimal performance impact.
 
 ## Key Features
 
@@ -24,16 +24,18 @@ crypto-tracer is a standalone command-line tool for monitoring and analyzing cry
 
 ## What crypto-tracer Monitors
 
-crypto-tracer tracks three main types of cryptographic activity:
+**crypto-tracer** tracks three main types of cryptographic activity:
 
 ### 1. File Access
 Opening of crypto files:
+
 - Certificates (`.crt`, `.cer`, `.pem`)
 - Private keys (`.key`, `.pem`)
 - Keystores (`.p12`, `.pfx`, `.jks`, `.keystore`)
 
 ### 2. Library Loading
 Loading of crypto libraries:
+
 - OpenSSL (`libssl`, `libcrypto`)
 - GnuTLS (`libgnutls`)
 - libsodium (`libsodium`)
@@ -45,7 +47,7 @@ Process execution and termination related to crypto operations
 
 ## How It Works
 
-crypto-tracer uses eBPF (Extended Berkeley Packet Filter) to monitor system activity:
+**crypto-tracer** uses eBPF (Extended Berkeley Packet Filter) to monitor system activity:
 
 1. **eBPF Programs** run in the Linux kernel and observe system calls
 2. **Tracepoints** capture file opens, library loads, and process events

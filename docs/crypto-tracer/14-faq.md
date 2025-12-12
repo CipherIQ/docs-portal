@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQ)
 
-This section answers common questions about crypto-tracer.
+This section answers common questions about **crypto-tracer**.
 
 ## General Questions
 
@@ -22,7 +22,7 @@ sudo setcap cap_bpf,cap_perfmon+ep ./crypto-tracer
 
 ### Q: Does crypto-tracer work on my Linux distribution?
 
-**A:** crypto-tracer works on any Linux distribution with kernel 4.15 or later and eBPF support. This includes:
+**A:** **crypto-tracer** works on any Linux distribution with kernel 4.15 or later and eBPF support. This includes:
 
 - Ubuntu 20.04, 22.04, 24.04
 - Debian 11, 12
@@ -39,7 +39,7 @@ uname -r
 
 ### Q: Will crypto-tracer slow down my applications?
 
-**A:** No. crypto-tracer has minimal performance impact:
+**A:** No. **crypto-tracer** has minimal performance impact:
 
 - **crypto-tracer CPU usage:** <0.5% per core
 - **Application overhead:** <1% additional CPU
@@ -50,7 +50,7 @@ It uses efficient eBPF technology that runs in the kernel with very low overhead
 
 ### Q: Is crypto-tracer safe to use in production?
 
-**A:** Yes. crypto-tracer is designed for production use:
+**A:** Yes. **crypto-tracer** is designed for production use:
 
 - **Read-only operation** - Never modifies files or system state
 - **No system changes** - No configuration modifications
@@ -60,7 +60,7 @@ It uses efficient eBPF technology that runs in the kernel with very low overhead
 
 ### Q: Does crypto-tracer send data anywhere?
 
-**A:** No. crypto-tracer has:
+**A:** No. **crypto-tracer** has:
 
 - **No telemetry** - Doesn't send any data externally
 - **Works offline** - No network connectivity required
@@ -182,7 +182,7 @@ sudo ./crypto-tracer profile --pid 1234 --duration 60
 - Cannot crash the system
 - Used for observability, networking, and security
 
-crypto-tracer uses eBPF to observe system calls with minimal overhead.
+**crypto-tracer** uses eBPF to observe system calls with minimal overhead.
 
 ### Q: What is CO-RE?
 
@@ -195,7 +195,7 @@ crypto-tracer uses eBPF to observe system calls with minimal overhead.
 - Automatic adaptation to kernel structures
 - Handles kernel version differences
 
-crypto-tracer uses CO-RE to work on various kernels (4.15+) without recompilation.
+**crypto-tracer** uses CO-RE to work on various kernels (4.15+) without recompilation.
 
 ### Q: What is BTF?
 
@@ -209,7 +209,7 @@ crypto-tracer uses CO-RE to work on various kernels (4.15+) without recompilatio
 
 **If your kernel doesn't have BTF:**
 
-- crypto-tracer automatically uses fallback headers
+- **crypto-tracer** automatically uses fallback headers
 - Functionality is the same
 - No action needed from you
 
@@ -265,7 +265,7 @@ docker run --cap-add=CAP_BPF --cap-add=CAP_PERFMON \
 
 ### Q: What data does crypto-tracer collect?
 
-**A:** crypto-tracer collects metadata only:
+**A:** **crypto-tracer** collects metadata only:
 
 **What IS collected:**
 
@@ -306,7 +306,7 @@ sudo ./crypto-tracer monitor --no-redact
 
 ### Q: Can crypto-tracer see my private keys?
 
-**A:** No. crypto-tracer only sees that a file was opened, not its content.
+**A:** No. **crypto-tracer** only sees that a file was opened, not its content.
 
 **What crypto-tracer knows:**
 
@@ -321,7 +321,7 @@ sudo ./crypto-tracer monitor --no-redact
 - The key material
 - Any data read from the file
 
-crypto-tracer observes file system operations, not file content.
+**crypto-tracer** observes file system operations, not file content.
 
 ### Q: Is the output safe to share?
 
@@ -367,7 +367,7 @@ getcap ./crypto-tracer
 
 ### Q: Why do I get "Kernel too old"?
 
-**A:** crypto-tracer requires kernel 4.15 or later.
+**A:** **crypto-tracer** requires kernel 4.15 or later.
 
 **Check your kernel:**
 ```bash

@@ -1,10 +1,10 @@
 # Performance Considerations
 
-This section covers performance characteristics, optimization techniques, and monitoring for crypto-tracer.
+This section covers performance characteristics, optimization techniques, and monitoring for **crypto-tracer**.
 
 ## Expected Performance
 
-crypto-tracer is designed to have minimal impact on system performance.
+**crypto-tracer** is designed to have minimal impact on system performance.
 
 ### CPU Usage
 
@@ -243,7 +243,7 @@ sudo ./crypto-tracer monitor --duration 3600
 
 ### Check Event Rate
 
-Monitor how many events crypto-tracer is processing.
+Monitor how many events **crypto-tracer** is processing.
 
 ```bash
 # Run with verbose to see statistics
@@ -324,7 +324,7 @@ sudo ./crypto-tracer monitor --verbose 2>&1 | grep -i "drop\|backpressure"
 
 ### Benchmark Your System
 
-Test crypto-tracer performance on your specific system.
+Test **crypto-tracer** performance on your specific system.
 
 ```bash
 #!/bin/bash
@@ -366,7 +366,7 @@ echo "=== Benchmark Complete ==="
 
 **Symptoms:**
 
-- crypto-tracer using >5% CPU
+- **crypto-tracer** using >5% CPU
 - System feels slow
 - High load average
 
@@ -424,7 +424,7 @@ sudo ./crypto-tracer monitor --format json-stream
 
 **Symptoms:**
 
-- crypto-tracer using >100 MB RAM
+- **crypto-tracer** using >100 MB RAM
 - System running out of memory
 - OOM killer messages
 

@@ -1,6 +1,6 @@
 # Support and Resources
 
-This section provides information about getting help, contributing, and additional resources for crypto-tracer.
+This section provides information about getting help, contributing, and additional resources for **crypto-tracer**.
 
 ## Documentation
 
@@ -360,7 +360,7 @@ Signed-off-by: Your Name <your.email@example.com>
 
 ### Exit Codes
 
-crypto-tracer uses standard exit codes:
+**crypto-tracer** uses standard exit codes:
 
 | Code | Name | Description |
 |------|------|-------------|
@@ -395,7 +395,7 @@ esac
 
 ### Environment Variables
 
-crypto-tracer respects these environment variables:
+**crypto-tracer** respects these environment variables:
 
 | Variable | Description | Values | Default |
 |----------|-------------|--------|---------|
@@ -470,7 +470,7 @@ sudo ./crypto-tracer monitor
 
 ### Supported Crypto Libraries
 
-crypto-tracer recognizes these cryptographic libraries:
+**crypto-tracer** recognizes these cryptographic libraries:
 
 **OpenSSL:**
 - `libssl.so`, `libssl.so.1.1`, `libssl.so.3`
@@ -523,13 +523,13 @@ crypto-tracer recognizes these cryptographic libraries:
 
 - Kernel instrumentation point
 - Stable API for observing kernel events
-- Used by crypto-tracer for file and process events
+- Used by **crypto-tracer** for file and process events
 
 **Uprobe (User-space Probe)**
 
 - Dynamic instrumentation of user-space functions
 - Used for library function tracing
-- Optional in crypto-tracer
+- Optional in **crypto-tracer**
 
 **CAP_BPF**
 

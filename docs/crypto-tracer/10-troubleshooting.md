@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This section covers common problems you may encounter when using crypto-tracer and their solutions.
+This section covers common problems you may encounter when using **crypto-tracer** and their solutions.
 
 ## Common Issues
 
@@ -12,7 +12,7 @@ Error: Permission denied
 Failed to load eBPF programs: Operation not permitted
 ```
 
-**Cause:** crypto-tracer needs special privileges to load eBPF programs into the kernel.
+**Cause:** **crypto-tracer** needs special privileges to load eBPF programs into the kernel.
 
 **Solution:**
 
@@ -149,7 +149,7 @@ sudo ./crypto-tracer monitor --name myapp
 Error: Kernel version 3.10 is not supported (requires 4.15+)
 ```
 
-**Cause:** crypto-tracer requires Linux kernel 4.15 or later for eBPF support.
+**Cause:** **crypto-tracer** requires Linux kernel 4.15 or later for eBPF support.
 
 **Check current kernel:**
 ```bash
@@ -236,7 +236,7 @@ cat events.json | jq -s '.' > events-array.json
 
 ### Issue: High CPU Usage
 
-**Symptoms:** crypto-tracer using >5% CPU, or system feels slow.
+**Symptoms:** **crypto-tracer** using >5% CPU, or system feels slow.
 
 **Diagnosis:**
 
@@ -304,7 +304,7 @@ sudo ./crypto-tracer monitor --duration 60
 
 ### Issue: Capabilities Lost After Rebuild
 
-**Problem:** After rebuilding crypto-tracer, capabilities are gone and you get permission denied again.
+**Problem:** After rebuilding **crypto-tracer**, capabilities are gone and you get permission denied again.
 
 **Cause:** Capabilities are tied to the specific binary file. When you rebuild, a new binary is created without capabilities.
 

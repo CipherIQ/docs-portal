@@ -1,10 +1,10 @@
 # Integration with Other Tools
 
-This section covers how to integrate crypto-tracer with popular monitoring, logging, and analysis tools.
+This section covers how to integrate **crypto-tracer** with popular monitoring, logging, and analysis tools.
 
 ## Integration with jq
 
-jq is a powerful JSON processor that's essential for analyzing crypto-tracer output.
+jq is a powerful JSON processor that's essential for analyzing **crypto-tracer** output.
 
 ### Installation
 
@@ -81,7 +81,7 @@ See the [Advanced Usage](11-advanced-usage.md) section for more jq examples.
 
 ## Integration with Elasticsearch
 
-Index crypto-tracer events in Elasticsearch for powerful search and analysis.
+Index **crypto-tracer** events in Elasticsearch for powerful search and analysis.
 
 ### Stream Events to Elasticsearch
 
@@ -177,7 +177,7 @@ curl -X GET "http://localhost:9200/crypto-events/_search" \
 
 ## Integration with Splunk
 
-Forward crypto-tracer events to Splunk for centralized logging and analysis.
+Forward **crypto-tracer** events to Splunk for centralized logging and analysis.
 
 ### Configure Splunk HTTP Event Collector (HEC)
 
@@ -225,7 +225,7 @@ sourcetype="crypto-tracer" event_type="file_open" | top file
 
 ## Integration with Prometheus
 
-Export crypto-tracer metrics to Prometheus for monitoring and alerting.
+Export **crypto-tracer** metrics to Prometheus for monitoring and alerting.
 
 ### Generate Prometheus Metrics
 
@@ -323,7 +323,7 @@ groups:
 
 ## Integration with Grafana
 
-Visualize crypto-tracer data in Grafana dashboards.
+Visualize **crypto-tracer** data in Grafana dashboards.
 
 ### Setup
 
@@ -393,7 +393,7 @@ Visualization: Pie chart
 
 ## Integration with SIEM Systems
 
-Forward crypto-tracer events to Security Information and Event Management (SIEM) systems.
+Forward **crypto-tracer** events to Security Information and Event Management (SIEM) systems.
 
 ### Forward to Syslog
 
@@ -449,7 +449,7 @@ if $programname == 'crypto-tracer' then @@siem.example.com:514
 
 ## Integration with Python
 
-Process crypto-tracer events in Python for custom analysis.
+Process **crypto-tracer** events in Python for custom analysis.
 
 ### Real-time Event Processing
 
@@ -572,7 +572,7 @@ if __name__ == '__main__':
 
 ## Integration with Ansible
 
-Automate crypto-tracer deployment and data collection with Ansible.
+Automate **crypto-tracer** deployment and data collection with Ansible.
 
 ### Playbook: Deploy crypto-tracer
 
@@ -670,7 +670,7 @@ Automate crypto-tracer deployment and data collection with Ansible.
 
 ## Integration with Docker
 
-Run crypto-tracer in containers to monitor containerized applications.
+Run **crypto-tracer** in containers to monitor containerized applications.
 
 ### Dockerfile
 
