@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # CLI Syntax Reference
 
 Complete command-line syntax for CBOM Generator.
 
----
 
 ## Usage
 
@@ -152,11 +155,3 @@ If no paths specified, scans default system locations.
 | 1 | Error (see stderr/error log) |
 
 ---
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `CBOM_SALT` | Salt for privacy redaction |
-| `CBOM_CACHE_DIR` | Cache directory |
-| `CBOM_LOG_LEVEL` | Logging verbosity |

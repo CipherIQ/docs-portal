@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Permission Errors
 
 Troubleshooting access denied and permission issues.
 
----
 
 ## Symptoms
 

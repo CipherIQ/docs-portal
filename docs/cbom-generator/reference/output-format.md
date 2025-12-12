@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Output Format Reference
 
 CycloneDX format specification details.
 
----
 
 ## Supported Formats
 
@@ -59,9 +62,14 @@ cyclonedx validate --input cbom.json
 ajv validate -s bom-1.6.schema.json -d cbom.json
 ```
 
+
+>NOTE: current tools target 1.6 and the `cbom-generator` targets compliance with 1.7.
+
+
 Schema files available at:
-- https://cyclonedx.org/schema/bom-1.6.schema.json
-- https://cyclonedx.org/schema/bom-1.7.schema.json
+
+- [https://cyclonedx.org/schema/bom-1.6.schema.json](https://cyclonedx.org/schema/bom-1.6.schema.json)
+- [https://cyclonedx.org/schema/bom-1.7.schema.json](https://cyclonedx.org/schema/bom-1.7.schema.json)
 
 ---
 

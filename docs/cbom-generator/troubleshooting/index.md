@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Troubleshooting
 
 Solutions for common issues with CBOM Generator.

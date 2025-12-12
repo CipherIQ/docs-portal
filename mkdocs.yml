@@ -107,7 +107,6 @@ nav:
     - Reference:
       - CLI Syntax: cbom-generator/reference/cli-syntax.md
       - Output Format: cbom-generator/reference/output-format.md
-      - Deprecated Features: cbom-generator/reference/deprecated-features.md
     - About:
       - What's New: cbom-generator/about/whats-new.md
       - Best Practices: cbom-generator/about/best-practices.md

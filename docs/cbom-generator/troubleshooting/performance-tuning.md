@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # Performance Tuning
 
-Optimize CBOM Generator scan performance.
+Optimize the CBOM Generator scan performance.
 
----
 
 ## Symptoms
 

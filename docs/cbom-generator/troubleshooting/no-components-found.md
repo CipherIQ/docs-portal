@@ -1,8 +1,11 @@
+---
+hide:
+  - toc
+---
 # No Components Found
 
 Troubleshooting when CBOM Generator returns empty or minimal results.
 
----
 
 ## Symptoms
 
