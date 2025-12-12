@@ -113,8 +113,27 @@ nav:
       - Support: cbom-generator/about/support.md
   - CBOM Explorer:
     - cbom-explorer/index.md
-  - Crypto Tracer:
+  - Crypto Tracer: 
     - crypto-tracer/index.md
+    - Getting Started: 
+      - crypto-tracer/02-getting-started.md
+      - Installation: crypto-tracer/03-installation.md
+    - Core Concepts:
+      - Basic Concepts: crypto-tracer/04-basic-concepts.md
+      - Commands Reference: crypto-tracer/05-commands-reference.md   
+    - Practical Usage:
+      - Common Use Cases: crypto-tracer/06-common-use-cases.md
+      - Output Formats: crypto-tracer/07-output-formats.md
+      - Filtering and Options: crypto-tracer/08-filtering-options.md
+      - Privacy and Security: crypto-tracer/09-privacy-security.md
+    - Advanced Topics:
+      - Troubleshooting: crypto-tracer/10-troubleshooting.md
+      - Advanced Usage: crypto-tracer/11-advanced-usage.md
+      - Performance: crypto-tracer/12-performance.md
+      - Integration: crypto-tracer/13-integration.md
+    - Reference & Support:
+      - FAQ: crypto-tracer/14-faq.md
+      - Support and Resources: crypto-tracer/15-support.md
   - PQC Flow:
     - pqc-flow/index.md
   - About:

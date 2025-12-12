@@ -335,6 +335,39 @@ All CipherIQ tools are dual-licensed:
 - **GPL 3.0** - Free for open-source use (copyleft applies when distributing)
 - **Commercial license** -  For proprietary integration without copyleft obligations
 
-Commerical licenses may include support, custom development, and compliance templates.
 
+### Open Source License
+
+**GPL-3.0-or-later:**
+
+- Free to use, modify, and distribute
+- Must release modifications under GPL-3.0
+- Source code must be made available
+- See LICENSE file for full terms
+
+**Key Points:**
+
+- ✅ Use for any purpose
+- ✅ Modify the source code
+- ✅ Distribute copies
+- ✅ Distribute modified versions
+- ⚠️ Must disclose source
+- ⚠️ Must use same license
+- ⚠️ Must state changes
+
+### Commercial License
+
+**For proprietary use:**
+
+- Use without GPL requirements
+- No source code disclosure required
+- Suitable for proprietary products
+- Contact sales@cipheriq.io for pricing
+
+**When you need commercial license:**
+
+- Embedding in proprietary software
+- Don't want to disclose source
+- Need different license terms
+- Require legal indemnification
 ---

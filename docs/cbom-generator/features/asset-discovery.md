@@ -328,8 +328,7 @@ Libraries may be found both through package manager queries and through binary a
 ## See Also
 
 - [Container Scanning](../advanced/container-scanning.md) - Scanning Docker and Podman containers
-- [Cross-Architecture Scanning](CROSS_ARCH_SCANNING.md) - Scanning Yocto and embedded systems
-- [Plugin Guide](PLUGIN_GUIDE.md) - Creating custom service plugins
+- [Cross-Architecture Scanning](../advanced/cross-architecture.md) - Scanning Yocto and embedded systems
 
 
 

@@ -381,4 +381,4 @@ cat cbom.json | jq '.components[] |
 ## See Also
 
 - [Container Scanning](container-scanning.md) - Docker and Podman workflows
-- [Scanner Behavior](../advanced/asset-discovery.md) - How each scanner works
+- [Scanner Behavior](../features/asset-discovery.md) - How each scanner works

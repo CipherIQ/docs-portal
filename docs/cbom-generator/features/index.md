@@ -14,7 +14,7 @@ The CBOM Generator provides comprehensive cryptographic asset discovery and anal
 | [Key Material Detection](key-material-detection.md) | Multi-format key discovery with security analysis |
 | [Service Dependencies](service-dependencies.md) | 4-level dependency graph (SERVICE→PROTOCOL→SUITE→ALGO) |
 | [Protocol Properties](protocol-properties.md) | TLS/SSH/IPsec protocol analysis |
-| [PQC Assessment](pqc-assessment.md) | Post-Quantum Cryptography readiness scoring |
+| [PQC Assessment](pqc-classification.md) | Post-Quantum Cryptography readiness scoring |
 | [Relationship Graph](relationship-graph.md) | Complete dependency tracking |
 | [Privacy Controls](privacy-controls.md) | GDPR/CCPA-compliant redaction |
 | [Deduplication](deduplication.md) | Intelligent duplicate handling |
