@@ -2,17 +2,13 @@
 hide:
   - toc
 ---
-# CBOM Generator
-
-**Version**: 1.9.0 | **Platform**: Linux (Ubuntu, RHEL, Debian)
-
----
+# Introduction
 
 ## What is CBOM Generator?
 
 The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, high-performance C11 multithreaded application that inventories cryptographic assets on Linux systems to assess Post-Quantum Cryptography (PQC) readiness.
 
-**Key Capabilities**:
+## Key Capabilities
 
 - **Comprehensive Asset Discovery**: Certificates, keys, packages, services, protocols, cipher suites
 - **Complete Dependency Graph**: Tracks relationships between services, protocols, and algorithms
@@ -21,7 +17,8 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 - **Privacy-by-Default**: GDPR/CCPA compliant with configurable redaction
 - **Industry Standards**: Outputs CycloneDX 1.6/1.7 format with CBOM extensions
 
----
+**Version**: 1.9.0 | **Platform**: Linux (Ubuntu, RHEL, Debian)
+
 
 ## Why Use CBOM Generator?
 
@@ -45,7 +42,6 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 - Identify services using deprecated protocols or cipher suites
 - Plan migrations with PQC readiness scoring and recommendations
 
----
 
 ## Quick Links
 
