@@ -4,3 +4,13 @@
   --md-primary-fg-color--dark: #2A5F8A;   /* Example darker shade */
   --md-primary-bg-color: #FFFFFF;         /* Text color on the header (e.g., white for contrast) */
 }
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color) !important;
+  background: rgba(59, 130, 182, 0.1);   /* Very light blue background */
+  padding: 0.35rem 1rem !important;
+  margin: 1.2rem 0 0.4rem -1rem !important;
+  border-radius: 0 6px 6px 0;
+}
