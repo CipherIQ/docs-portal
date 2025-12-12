@@ -321,7 +321,7 @@ Each tool has its own documentation with installation guides, tutorials, and exa
 
 ### Commercial Support
 
-For IoT/OT manufacturers and enterprises requiring professional support:
+For IoT/OT manufacturers and enterprises requiring a commercial license or professional support:
 
 - **Email:** sales@cipheriq.com
 
@@ -331,9 +331,10 @@ For IoT/OT manufacturers and enterprises requiring professional support:
 
 All CipherIQ tools are dual-licensed:
 
-- **GPL 3.0** - Free for open-source and commercial use
-- **Commercial license** - Available with support, custom development, and compliance templates
 
-See individual repositories for license details.
+- **GPL 3.0** - Free for open-source use (copyleft applies when distributing)
+- **Commercial license** -  For proprietary integration without copyleft obligations
+
+Commerical licenses may include support, custom development, and compliance templates.
 
 ---
