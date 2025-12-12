@@ -33,7 +33,7 @@ Organizations with long-lived data or devices cannot afford to wait. They need v
 
 CipherIQ provides **dual-layer visibility** that closes the gap between configuration and reality:
 
-### Layer 1: Static Discovery (Build Time)
+### Layer 1: Static Discovery
 **What cryptography COULD be used based on configuration**
 
 Scan firmware, containers, and filesystems to inventory:
@@ -47,7 +47,7 @@ Scan firmware, containers, and filesystems to inventory:
 
 **Output:** Cryptography Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a>↗ format documenting the complete cryptographic supply chain
 
-### Layer 2: Runtime Monitoring (Production)
+### Layer 2: Runtime Monitoring 
 **What cryptography IS actually being used in production**
 
 Monitor live systems to observe:
