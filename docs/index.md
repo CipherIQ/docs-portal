@@ -1,14 +1,8 @@
----
-hide:
-  - toc
----
-
 <figure markdown="span">
   ![Image title](assets/cipheriq_logo_2x.png){ width="500" }
 </figure>
 
-# **Cryptographic Observability for the Quantum Era**
-
+## Cryptographic Observability for the Quantum Era
 Modern organizations operate in an environment where cryptographic transparency, algorithm safety, and software supply-chain security are no longer optional. Regulatory bodies, international standards organizations, and sector-specific authorities now require a clear understanding of what cryptography is used within systems, how secure it is, and how organizations plan to transition to quantum-resistant alternatives.
 
 **CipherIQ** is an open-source cryptographic observability platform that combines static asset discovery with runtime network monitoring to provide complete visibility into enterprise cryptographic posture.
@@ -33,7 +27,7 @@ As organizations face mandatory post-quantum cryptography (PQC) migration deadli
 
 Organizations with long-lived data or devices cannot afford to wait. They need visibility into their cryptographic attack surface **now**.
 
-### **[Relevant PQC-Specific Frameworks & Standards](compliance.md)**
+### **[Relevant PQC-Specific Frameworks & Standards](compliance.md)↗**
 
 ## The Solution: Complete Cryptographic Observability
 
@@ -51,7 +45,7 @@ Scan firmware, containers, and filesystems to inventory:
 
 **CipherIQ Tools**: [cbom-generator](./cbom-generator/index.md) and [cbom-explorer](./cbom-explorer/index.md)
 
-**Output:** Cryptography Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a> format documenting the complete cryptographic supply chain
+**Output:** Cryptography Bill of Material (CBOM) in JSON <a href="https://cyclonedx.org/" target="_blank">CycloneDX</a>↗ format documenting the complete cryptographic supply chain
 
 ### Layer 2: Runtime Monitoring (Production)
 **What cryptography IS actually being used in production**
@@ -94,9 +88,9 @@ Modern infrastructure has a dangerous gap between **declared cryptographic polic
 This dual-layer approach transforms cryptographic security from **"we think we're safe"** to **"we can prove we're safe"** with verifiable evidence.
 
 
-## Our Tools
+## CipherIQ Tools
 
-### 1) cbom-generator
+### **1) cbom-generator**
 **Static cryptographic asset discovery with PQC readiness assessment**
 
 Scans Linux filesystems, firmware images, and containers to generate comprehensive Cryptography Bills of Materials (CBOMs) in CycloneDX format.
@@ -121,7 +115,7 @@ Scans Linux filesystems, firmware images, and containers to generate comprehensi
 
 ---
 
-### 2) cbom-explorer
+### **2) cbom-explorer**
 **Web-based CBOM visualization and navigation**
 
 Lightweight, browser-based tool for exploring Cryptography Bills of Materials. No installation required—runs entirely in your browser.
@@ -146,7 +140,7 @@ Lightweight, browser-based tool for exploring Cryptography Bills of Materials. N
 
 ---
 
-### 3) crypto-tracer
+### **3) crypto-tracer**
 **kernel-based runtime cryptographic operation monitoring**
 
 Standalone command-line tool that uses Extended Berkeley Packet Filter (eBPF) to trace cryptographic operations on Linux systems in the kernel without modifying applications or requiring restarts.
@@ -172,7 +166,7 @@ Standalone command-line tool that uses Extended Berkeley Packet Filter (eBPF) to
 
 ---
 
-### 4) pqc-flow
+### **4) pqc-flow**
 **Passive network traffic analyzer for PQC detection**
 
 Analyzes encrypted network flows to detect post-quantum cryptography support and negotiation in TLS 1.3, SSH, IKEv2, and QUIC protocols.
@@ -315,15 +309,15 @@ Each tool has its own documentation with installation guides, tutorials, and exa
 
 ### Join the Community
 
-- **GitHub Discussions:** Ask questions, share use cases at [github.com/orgs/CipherIQ/discussions](https://github.com/orgs/CipherIQ/discussions)
+- **GitHub Discussions:** Ask questions, share use cases at: [github.com/orgs/CipherIQ/discussions](https://github.com/orgs/CipherIQ/discussions)
 - **Issue Trackers:** Report bugs or request features in individual repos as issues
-- **Email:** team@cipheriq.com
+- **Email:** *team@cipheriq.com*
 
 ### Commercial Support
 
 For IoT/OT manufacturers and enterprises requiring a commercial license or professional support:
 
-- **Email:** sales@cipheriq.com
+- **Email:** *sales@cipheriq.com*
 
 ---
 
@@ -362,7 +356,7 @@ All CipherIQ tools are dual-licensed:
 - Use without GPL requirements
 - No source code disclosure required
 - Suitable for proprietary products
-- Contact sales@cipheriq.io for pricing
+- Contact *sales@cipheriq.io* for pricing
 
 **When you need commercial license:**
 
@@ -370,4 +364,17 @@ All CipherIQ tools are dual-licensed:
 - Don't want to disclose source
 - Need different license terms
 - Require legal indemnification
+
+
 ---
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].hostname !== window.location.hostname) {
+      links[i].target = '_blank';
+      links[i].rel = 'noopener noreferrer';
+    }
+  }
+});
+</script>
