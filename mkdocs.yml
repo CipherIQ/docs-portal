@@ -1,12 +1,13 @@
 site_name: CipherIQ Portal
 site_description: CipherIQ products website
-site_url: https://docs.cipheriq.io/
+site_url: https://www.cipheriq.io/
 
 docs_dir: docs
 site_dir: site
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/cipheriq_icon_reversed_512.png
   features:
     - navigation.tabs
@@ -46,7 +47,7 @@ plugins:
       draggable: true
       auto_caption: true      # Use alt text as caption (recommended)
       caption_position: bottom
-      
+
 markdown_extensions:
   - admonition
   - codehilite
