@@ -44,7 +44,7 @@ The CBOM Visualizer transforms JSON output from the CBOM Generator into interact
     <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-06.png" class="glightbox">
       <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-06.png" alt="Cryptographic Assets List" loading="lazy">
     </a>
-    <figcaption class="screenshot-caption">Cryptographic Libraries Analsys</figcaption>
+    <figcaption class="screenshot-caption">Crypto Libraries Analysis</figcaption>
   </figure>
 
   <figure>
@@ -65,21 +65,21 @@ The CBOM Visualizer transforms JSON output from the CBOM Generator into interact
     <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-39.png" class="glightbox">
       <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-39.png" alt="Search and Filter Functionality" loading="lazy">
     </a>
-    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer (Libraries)</figcaption>
   </figure>
 
   <figure>
     <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-54.png" class="glightbox">
       <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-54.png" alt="Export Options" loading="lazy">
     </a>
-    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer (Algorithms)</figcaption>
   </figure>
 
   <figure>
     <a href="../assets/screenshots/Screenshot from 2025-12-13 10-08-07.png" class="glightbox">
       <img src="../assets/screenshots/Screenshot from 2025-12-13 10-08-07.png" alt="Validation Results" loading="lazy">
     </a>
-    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer (Applications)</figcaption>
   </figure>
 </div>
                                                                                                                    
