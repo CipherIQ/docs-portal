@@ -111,7 +111,18 @@ Scans Linux filesystems, firmware images, and containers to generate comprehensi
 - Security teams conducting quantum readiness assessments
 - Compliance officers documenting cryptographic controls
 
+ 
 **[Learn more →](./cbom-generator/index.md)** | **[GitHub →](https://github.com/CipherIQ/cbom-generator)**
+
+### Yocto CBOM Sample 
+
+??? note "Click to expand: Full first 200 lines of yocto-cbom.json"
+
+    ```json linenums="1"
+    --8<-- "https://raw.githubusercontent.com/CipherIQ/cbom-explorer/main/samples/yocto-cbom.json:1:200"
+    ```
+
+[View the full Yocto CBOM on GitHub (pretty-printed, searchable)](https://github.com/CipherIQ/cbom-explorer/blob/main/samples/yocto-cbom.json)↗
 
 ---
 

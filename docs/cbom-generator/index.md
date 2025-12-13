@@ -42,6 +42,16 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 - Identify services using deprecated protocols or cipher suites
 - Plan migrations with PQC readiness scoring and recommendations
 ---
+## Yocto CBOM Sample
+
+??? note "Click to expand: Full first 200 lines of yocto-cbom.json"
+
+    ```json linenums="1"
+    --8<-- "https://raw.githubusercontent.com/CipherIQ/cbom-explorer/main/samples/yocto-cbom.json:1:200"
+    ```
+
+[View the full Yocto CBOM on GitHub (pretty-printed, searchable)](https://github.com/CipherIQ/cbom-explorer/blob/main/samples/yocto-cbom.json)↗
+
 
 ## License
 
@@ -64,3 +74,15 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 
 ---
 Copyright (c) 2025 Graziano Labs Corp.
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].hostname !== window.location.hostname) {
+      links[i].target = '_blank';
+      links[i].rel = 'noopener noreferrer';
+    }
+  }
+});
+</script>
