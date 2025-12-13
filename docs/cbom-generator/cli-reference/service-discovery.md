@@ -2,12 +2,12 @@
 hide:
   - toc
 ---
-# Service Discovery Options (v1.3)
+# Service Discovery Options
 
 YAML plugin-driven service discovery for detecting running services and extracting their cryptographic configurations.
 
 
-## `--discover-services`
+### `--discover-services`
 
 Enable YAML plugin-driven service discovery pipeline.
 
@@ -71,7 +71,7 @@ INFO: Phase 4.5 pipeline complete
 
 ---
 
-## `--plugin-dir DIR`
+### `--plugin-dir DIR`
 
 Specify custom directory for YAML plugins.
 
@@ -92,7 +92,7 @@ Specify custom directory for YAML plugins.
 
 ---
 
-## `--list-plugins`
+### `--list-plugins`
 
 List all loaded plugins and exit.
 

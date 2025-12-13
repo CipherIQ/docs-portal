@@ -8,7 +8,7 @@ Control how duplicate cryptographic assets are handled.
 
 ---
 
-## `--dedup-mode MODE`
+### `--dedup-mode MODE`
 
 Control duplicate asset handling.
 
@@ -55,7 +55,7 @@ Bundles similar components (e.g., all system CA certificates become a single bun
 
 ---
 
-## `--emit-bundles`
+### `--emit-bundles`
 
 Emit bundle components when using `--dedup-mode=strict`.
 

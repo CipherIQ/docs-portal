@@ -367,6 +367,17 @@ All CipherIQ tools are dual-licensed:
 
 
 ---
+
+## Further Resources
+
+- [NIST Post-Quantum Cryptography Project](https://csrc.nist.gov/projects/post-quantum-cryptography)
+- [Open Quantum Safe Project](https://openquantumsafe.org/)
+- [Cloudflare PQC Deployment](https://developers.cloudflare.com/ssl/post-quantum-cryptography/pqc-support/)
+- [OpenSSH PQC Support](https://www.openssh.com/releasenotes.html)
+
+---
+Copyright (c) 2025 Graziano Labs Corp.
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var links = document.querySelectorAll('a');

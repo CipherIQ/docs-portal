@@ -136,4 +136,16 @@ cbom-viz.html
     └── View classes (Dashboard, Heatmap, etc.)
 ```
 ---
+
+## License
+
+**crypto-tracer** like all the tools in **CipherIQ** is dual-licensed:
+
+- **GPL 3.0** - Free for open-source use (copyleft applies when distributing)
+- **Commercial license** -  For proprietary integration without copyleft obligations
+
+  [See details](../index.md/#license)
+
+---
+
 Copyright (c) 2025 Graziano Labs Corp.

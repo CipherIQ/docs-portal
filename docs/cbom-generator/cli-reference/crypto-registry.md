@@ -17,7 +17,7 @@ The **Crypto Registry** is a declarative catalog of cryptographic libraries, pro
 - Platform-aware crypto visibility
 - Instant adaptation via YAML updates
 
-## `--crypto-registry FILE`
+### `--crypto-registry FILE`
 
 Load external crypto library registry from YAML file to extend built-in registry.
 
@@ -82,7 +82,7 @@ The generator includes 5 built-in crypto libraries:
 | **nettle** | Low-level crypto library | libnettle.so, libhogweed.so |
 | **krb5** | Kerberos crypto | libgssapi_krb5.so, libkrb5.so |
 
-**Built-in Embedded Apps (3)**:
+**Built-in Embedded Apps **:
 
 - `openssh_internal` - OpenSSH built-in crypto
 - `wireguard_internal` - WireGuard VPN crypto

@@ -8,7 +8,7 @@ Control visual output and reporting.
 
 
 
-## `--tui`
+### `--tui`
 
 Enable Terminal User Interface with real-time progress display.
 
@@ -62,7 +62,7 @@ Use `--error-log` to capture errors.
 
 ---
 
-## `--pqc-report FILE`  
+### `--pqc-report FILE`  
 
 Generate comprehensive PQC migration report in human-readable text format.
 
@@ -120,7 +120,7 @@ LOW (Break by 2045+):          0 assets  [LONG-TERM PLAN]
 
 ---
 
-## `--error-log FILE`
+### `--error-log FILE`
 
 Write errors to a log file with timestamps (especially useful with `--tui`).
 

@@ -7,7 +7,7 @@ hide:
 Control threading, determinism, and cross-architecture scanning.
 
 
-## `-t, --threads N`
+### `-t, --threads N`
 
 Number of worker threads for parallel scanner execution.
 
@@ -50,7 +50,7 @@ Number of worker threads for parallel scanner execution.
 
 ---
 
-## `-d, --deterministic` (Default: ON)
+### `-d, --deterministic (Default: ON)`
 
 Enable deterministic output (same input produces identical hash).
 
@@ -71,7 +71,7 @@ Enable deterministic output (same input produces identical hash).
 
 ---
 
-## `--cross-arch`
+### `--cross-arch`
 
 Enable cross-architecture scanning mode for embedded systems.
 

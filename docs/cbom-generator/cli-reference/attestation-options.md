@@ -6,7 +6,6 @@ hide:
 
 SLSA provenance and digital signature support for CBOM integrity.
 
----
 
 ## Current Status (v1.9)
 
@@ -33,11 +32,12 @@ The `metadata.provenance` block includes build attestation:
 
 This allows build verification without cryptographic signatures.
 
-> Full capability SLSA v0.2 attestation with DSSE digital signatures, runtime git metadata collection, and complete SLSA predicate structure available in v2.0.
+!!!note
+    Full capability SLSA v0.2 attestation with DSSE digital signatures, runtime git metadata collection, and complete SLSA predicate structure available in v2.0.
 
 ---
 
-## `--enable-attestation`
+### `--enable-attestation`
 
 Enable CBOM attestation with digital signature.
 
@@ -50,7 +50,7 @@ Enable CBOM attestation with digital signature.
 
 ---
 
-## `--signature-method METHOD`
+### `--signature-method METHOD`
 
 Signature method selection.
 
@@ -68,7 +68,7 @@ Signature method selection.
 
 ---
 
-## `--signing-key PATH`
+### `--signing-key PATH`
 
 Path to signing key file.
 
@@ -101,4 +101,4 @@ The provenance metadata includes:
 - Key management integration
 - Signature verification tooling
 
-See GitHub issues for timeline.
+**See GitHub issues for a timeline.**

@@ -41,7 +41,18 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 - Discover all TLS/SSH configurations across infrastructure
 - Identify services using deprecated protocols or cipher suites
 - Plan migrations with PQC readiness scoring and recommendations
+---
 
+## License
+
+**crypto-tracer** like all the tools in **CipherIQ** is dual-licensed:
+
+- **GPL 3.0** - Free for open-source use (copyleft applies when distributing)
+- **Commercial license** -  For proprietary integration without copyleft obligations
+
+  [See details](../index.md/#license)
+
+---
 
 ## Quick Links
 
@@ -50,3 +61,6 @@ The **Cryptography Bill of Materials (CBOM) Generator** is a production-ready, h
 - [CLI Reference](cli-reference/index.md) - Complete command-line options
 - [Features](features/index.md) - Deep-dive into capabilities
 - [Playbooks](playbooks/index.md) - Step-by-step migration guides
+
+---
+Copyright (c) 2025 Graziano Labs Corp.

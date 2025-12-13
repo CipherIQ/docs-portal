@@ -7,7 +7,7 @@ hide:
 Control where and how CBOM output is generated.
 
 
-## `-o, --output FILE`
+### `-o, --output FILE`
 
 Specify output file path (default: stdout).
 
@@ -21,7 +21,7 @@ Specify output file path (default: stdout).
 
 ---
 
-## `-f, --format FORMAT`
+### `-f, --format FORMAT`
 
 Output format selection.
 
@@ -38,7 +38,7 @@ Output format selection.
 
 ---
 
-## `--cyclonedx-spec VERSION`
+### `--cyclonedx-spec VERSION`
 
 CycloneDX specification version.
 
@@ -52,12 +52,13 @@ CycloneDX specification version.
 ./build/cbom-generator --cyclonedx-spec=1.7 --output cbom.json
 ```
 
+
 **Note**: Both versions produce similar content. Key differences:
 
 | Feature | 1.6 | 1.7 |
 |---------|-----|-----|
 | `specVersion` field | `"1.6"` | `"1.7"` |
 | Dependencies array | Supported | Enhanced |
-| Tool compatibility | Wider | Growing |
+| Tools compatibility | Wider | Limited |
 
-**Recommendation**: Use `1.6` for maximum compatibility with existing tools. Use `1.7` when you need the full dependency graph.
+**Recommendation**: Use `1.7` for the full dependency graph. Use `1.6` only for maximum compatibility with existing tools. 

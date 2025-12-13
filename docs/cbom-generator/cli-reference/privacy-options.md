@@ -7,7 +7,7 @@ hide:
 Control personal data handling for GDPR/CCPA compliance.
 
 
-## `--no-personal-data` (Default: ON)
+### `--no-personal-data (Default: ON)`
 
 Redact personal data for GDPR/CCPA compliance.
 
@@ -29,7 +29,7 @@ Redact personal data for GDPR/CCPA compliance.
 
 ---
 
-## `--include-personal-data`
+### `--include-personal-data`
 
 Include hostnames, usernames, full file paths, and scan user SSH configurations.
 
@@ -47,7 +47,8 @@ Include hostnames, usernames, full file paths, and scan user SSH configurations.
 ./build/cbom-generator --include-personal-data --output cbom-full.json
 ```
 
-**Warning**: Output may contain sensitive information. Use appropriate access controls.
+!!!warning
+    Output may contain sensitive information. Use appropriate access controls.
 
 **Note**: User SSH config scanning is privacy-sensitive because it:
 
@@ -57,7 +58,7 @@ Include hostnames, usernames, full file paths, and scan user SSH configurations.
 
 ---
 
-## `--no-network`
+### `--no-network`
 
 Disable network operations.
 

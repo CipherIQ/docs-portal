@@ -78,4 +78,18 @@ This manual is organized into the following sections:
 
 ---
 
-**Next:** [Getting Started](02-getting-started.md)
+## License
+
+**crypto-tracer** like all the tools in **CipherIQ** is dual-licensed:
+
+- **GPL 3.0** - Free for open-source use (copyleft applies when distributing)
+- **Commercial license** -  For proprietary integration without copyleft obligations
+
+  [See details](../index.md/#license)
+
+---
+
+**Next:** [Installation](03-installation.md)
+
+---
+Copyright (c) 2025 Graziano Labs Corp.
