@@ -241,4 +241,4 @@ sudo ./crypto-tracer libs --duration 30
 
 ---
 
-**Previous:** [Introduction](01-introduction.md) | **Next:** [Installation](03-installation.md)
+**Previous:** [Introduction](index.md) | **Next:** [Installation](03-installation.md)

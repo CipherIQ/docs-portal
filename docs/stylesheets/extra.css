@@ -14,3 +14,31 @@
   margin: 1.2rem 0 0.4rem -1rem !important;
   border-radius: 0 6px 6px 0;
 }
+
+/* Responsive thumbnail grid with nice styling */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.screenshot-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-caption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--md-typeset-color);
+}

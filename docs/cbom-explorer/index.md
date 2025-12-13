@@ -14,7 +14,74 @@ The CBOM Visualizer transforms JSON output from the CBOM Generator into interact
 - Track certificate expirations using visual heatmaps                                                              
 - Analyze algorithm usage across your cryptographic inventory                                                      
 - Plan migrations with timeline views and priority recommendations                                                 
-- Search and export filtered subsets of your CBOM                                                                  
+- Search and export filtered subsets of your CBOM 
+
+## CBOM Explorer Screenshots
+
+<div class="screenshot-grid" data-gallery="cbom-explorer">
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-05-12.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-05-12.png" alt="Main Interface Overview" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">PQC Readiness Dashboard (Ubuntu)</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-06-01.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-06-01.png" alt="Loading a CBOM File" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">PQC Readiness Dashboard (Yocto)</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-06-53.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-06-53.png" alt="Component Details View" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Crypto Algorithms Distribution</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-06.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-06.png" alt="Cryptographic Assets List" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Cryptographic Libraries Analsys</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-19.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-19.png" alt="Algorithm Properties Panel" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">PQC Migration Timeline</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-34.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-34.png" alt="Related Crypto Materials" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Key PQC Metrics Summary</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-39.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-39.png" alt="Search and Filter Functionality" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-07-54.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-07-54.png" alt="Export Options" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+  </figure>
+
+  <figure>
+    <a href="../assets/screenshots/Screenshot from 2025-12-13 10-08-07.png" class="glightbox">
+      <img src="../assets/screenshots/Screenshot from 2025-12-13 10-08-07.png" alt="Validation Results" loading="lazy">
+    </a>
+    <figcaption class="screenshot-caption">Interactive CBOM Explorer</figcaption>
+  </figure>
+</div>
                                                                                                                    
 ## Quick Start                                                                                                        
 

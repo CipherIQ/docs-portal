@@ -35,7 +35,18 @@ extra_css:
 
 plugins:
   - search
-
+  - glightbox:
+      touchNavigation: true   # Swipe on mobile
+      loop: true              # Loop back to first image
+      effect: zoom            # Nice zoom-in effect
+      slide_effect: slide     # Carousel-like slide transition
+      width: 100%             # Full width in lightbox
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: true      # Use alt text as caption (recommended)
+      caption_position: bottom
+      
 markdown_extensions:
   - admonition
   - codehilite
