@@ -296,30 +296,6 @@ CipherIQ is designed for security teams who respect user privacy:
 
 ---
 
-## Get Started
-
-### Try the Tools
-
-Each tool has its own documentation with installation guides, tutorials, and examples:
-
-- **[cbom-generator Documentation →](./cbom-generator/index.md)**
-- **[cbom-explorer Documentation →](./cbom-explorer/index.md)**
-- **[crypto-tracer Documentation →](./crypto-tracer/index.md)**
-- **[pqc-flow Documentation →](./pqc-flow/index.md)**
-
-### Join the Community
-
-- **GitHub Discussions:** Ask questions, share use cases at: [github.com/orgs/CipherIQ/discussions](https://github.com/orgs/CipherIQ/discussions)
-- **Issue Trackers:** Report bugs or request features in individual repos as issues
-- **Email:** *team@cipheriq.com*
-
-### Commercial Support
-
-For IoT/OT manufacturers and enterprises requiring a commercial license or professional support:
-
-- **Email:** *sales@cipheriq.com*
-
----
 
 ## License
 
@@ -349,7 +325,7 @@ All CipherIQ tools are dual-licensed:
 - ⚠️ Must use same license
 - ⚠️ Must state changes
 
-### Commercial License
+## Commercial License
 
 **For proprietary use:**
 
@@ -358,15 +334,80 @@ All CipherIQ tools are dual-licensed:
 - Suitable for proprietary products
 - Contact *sales@cipheriq.io* for pricing
 
-**When you need commercial license:**
+### Regulatory Compliance Support
 
-- Embedding in proprietary software
-- Don't want to disclose source
-- Need different license terms
-- Require legal indemnification
+The commercial license provides the documentation, validation, and support necessary to 
+demonstrate compliance with evolving cryptographic transparency mandates:
+
+**FDA Section 524B (Medical Devices)**
+- Since March 2023, FDA requires SBOMs for all "cyber devices" (network-capable medical 
+  devices) as part of premarket submissions (510(k), PMA, De Novo)
+- Submissions must document cryptographic controls, authentication mechanisms, and 
+  encryption implementations per the Cybersecurity in Medical Devices guidance
+- Submissions lacking adequate cybersecurity documentation receive Refuse to Accept (RTA) 
+  letters, blocking market authorization
+- CBOMs provide the cryptographic inventory needed to demonstrate compliance with FDA's 
+  security architecture requirements and support total product lifecycle vulnerability management
 
 
+**NIS2 Directive**
+- Article 21 mandates formal policies for cryptography and encryption across 
+  essential and important entities
+- Requires supply chain security documentation and 24/72-hour incident reporting
+- CBOMs enable rapid identification of vulnerable cryptographic components during incidents
+
+**IEC 62443 (Industrial Cybersecurity)**
+- IEC 62443-4-1 requires secure development lifecycle practices including cryptographic 
+  asset documentation
+- Security Levels 3 and 4 demand rigorous cryptographic controls and PKI management
+- Our validated CBOMs support ISASecure® certification workflows
+
+
+**EU Cyber Resilience Act (CRA)**
+- The CRA requires manufacturers to document cryptographic components using SBOMs 
+  in machine-readable formats (enforcement begins December 2027)
+- Mandates state-of-the-art encryption and cryptographic lifecycle management
+- Our commercial offering provides CRA-aligned CBOM outputs compliant with 
+  BSI TR-03183-2 technical specifications
+
+**Additional Frameworks**: OMB M-23-02, NIST SP 800-131A, PCI-DSS 4.0, DORA
+
+#### Why Choose a Commercial License?
+
+- **Compliance Documentation**: Pre-built attestation templates and audit-ready reports 
+  aligned with CRA, NIS2, and IEC 62443 requirements
+- **Validated Outputs**: CBOMs suitable for regulatory submissions, third-party audits, 
+  and certification bodies
+- **Enterprise Support**: Priority response SLAs, dedicated technical contacts, and 
+  integration assistance
+- **No Copyleft Obligations**: Integrate into proprietary products without GPL 
+  disclosure requirements
+- **Post-Quantum Readiness**: Continuous updates tracking NIST PQC standards and 
+  cryptographic deprecation timelines
 ---
+
+## Get Started
+
+### Try the Tools
+
+Each tool has its own documentation with installation guides, tutorials, and examples:
+
+- **[cbom-generator Documentation →](./cbom-generator/index.md)**
+- **[cbom-explorer Documentation →](./cbom-explorer/index.md)**
+- **[crypto-tracer Documentation →](./crypto-tracer/index.md)**
+- **[pqc-flow Documentation →](./pqc-flow/index.md)**
+
+### Join the Community
+
+- **GitHub Discussions:** Ask questions, share use cases at: [github.com/orgs/CipherIQ/discussions](https://github.com/orgs/CipherIQ/discussions)
+- **Issue Trackers:** Report bugs or request features in individual repos as issues
+- **Email:** *team@cipheriq.com*
+
+### Commercial Support
+
+For IoT/OT manufacturers and enterprises requiring a commercial license or professional support:
+
+- **Email:** *sales@cipheriq.com*
 
 ## Further Resources
 
