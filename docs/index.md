@@ -336,7 +336,7 @@ All CipherIQ tools are dual-licensed:
 - ⚠️ Must use same license
 - ⚠️ Must state changes
 
-## Commercial License
+###  Commercial License
 
 **For proprietary use:**
 
@@ -344,6 +344,20 @@ All CipherIQ tools are dual-licensed:
 - No source code disclosure required
 - Suitable for proprietary products
 - Contact *sales@cipheriq.io* for pricing
+
+
+### Why Choose a Commercial License?
+
+- **Compliance Documentation**: Pre-built attestation templates and audit-ready reports 
+  aligned with CRA, NIS2, and IEC 62443 requirements
+- **Validated Outputs**: CBOMs suitable for regulatory submissions, third-party audits, 
+  and certification bodies
+- **Enterprise Support**: Priority response SLAs, dedicated technical contacts, and 
+  integration assistance
+- **No Copyleft Obligations**: Integrate into proprietary products without GPL 
+  disclosure requirements
+- **Post-Quantum Readiness**: Continuous updates tracking NIST PQC standards and 
+  cryptographic deprecation timelines
 
 ### Regulatory Compliance Support
 
@@ -383,20 +397,7 @@ demonstrate compliance with evolving cryptographic transparency mandates:
 
 **Additional Frameworks**: OMB M-23-02, NIST SP 800-131A, PCI-DSS 4.0, DORA
 
-#### Why Choose a Commercial License?
-
-- **Compliance Documentation**: Pre-built attestation templates and audit-ready reports 
-  aligned with CRA, NIS2, and IEC 62443 requirements
-- **Validated Outputs**: CBOMs suitable for regulatory submissions, third-party audits, 
-  and certification bodies
-- **Enterprise Support**: Priority response SLAs, dedicated technical contacts, and 
-  integration assistance
-- **No Copyleft Obligations**: Integrate into proprietary products without GPL 
-  disclosure requirements
-- **Post-Quantum Readiness**: Continuous updates tracking NIST PQC standards and 
-  cryptographic deprecation timelines
 ---
-
 ## Get Started
 
 ### Try the Tools
