@@ -114,7 +114,7 @@ Scans Linux filesystems, firmware images, and containers to generate comprehensi
  
 **[Learn more →](./cbom-generator/index.md)** | **[GitHub →](https://github.com/CipherIQ/cbom-generator)**
 
-### Yocto CBOM Sample 
+### Yocto Linux CBOM Sample 
 
 ??? note "Click to expand: Full first 200 lines of yocto-cbom.json"
 
