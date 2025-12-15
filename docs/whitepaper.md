@@ -612,8 +612,6 @@ Dependency = {
 
 ---
 
-===================================================================
-
 ## 3. Formal Properties
 
 ### 3.1 Determinism
@@ -906,7 +904,7 @@ Examples:
 - Network traffic analysis → pqc-flow
 - Interactive visualization → cbom-explorer
 
-### 6.7 Observability Coverage Matrix
+### 3.11 Observability Coverage Matrix
 
 | Asset Type | cbom-generator (S) | crypto-tracer (R) | pqc-flow (R) |
 |------------|-------------------|-------------------|--------------|
