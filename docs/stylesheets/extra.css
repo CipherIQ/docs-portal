@@ -49,3 +49,53 @@
   border: 1px solid var(--md-code-bg-color);
   border-radius: 4px;
 }
+/* Custom theorem admonition - compact, light background, fixed icon overlap */
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+  border: none;
+  border-left: 0.35rem solid #3B82B6;
+  background-color: rgba(59, 130, 182, 0.08);
+  border-radius: 0.3rem;
+  padding: 0.6rem 1rem;
+  margin: 1.2rem 0;
+}
+
+.md-typeset .theorem > p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0.4em 0;
+  font-style: italic;  /* Remove if you don't want italic */
+}
+
+.md-typeset .theorem > .admonition-title,
+.md-typeset .theorem > summary {
+  background-color: rgba(59, 130, 182, 0.15);
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.4rem 0.8rem 0.4rem 2.8rem;  /* Extra left padding for icon space */
+  margin: -0.6rem -1rem 0.6rem -1rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+  position: relative;  /* Ensure icon positions correctly */
+  min-height: 2rem;    /* Prevents collapse if icon is taller */
+}
+
+/* Icon positioning - absolute to avoid overlap */
+.md-typeset .theorem > .admonition-title::before,
+.md-typeset .theorem > summary::before {
+  background-color: #3B82B6;
+  -webkit-mask-image: var(--md-admonition-icon--theorem);
+  mask-image: var(--md-admonition-icon--theorem);
+  position: absolute;
+  left: 0.9rem;        /* Position from left edge */
+  top: 50%;
+  transform: translateY(-50%);  /* Vertical center */
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-right: 0;     /* No margin needed now */
+}
+
+/* Checkmark icon */
+:root {
+  --md-admonition-icon--theorem: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>");
+}
