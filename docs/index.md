@@ -1,3 +1,11 @@
+---
+og_type: website
+og_title: CipherIQ
+og_description: Cryptographic visibility and Post-Quantum Cryptography readiness for IoT and OT systems, enabling CBOM generation, compliance reporting, and cryptographic risk assessment for OEMs and regulated infrastructure.
+og_image: /assets/cipheriq-og.png   # relative path from docs/
+og_image_alt: CipherIQ - Cryptographic Visibility Platform
+author: Marco Graziano
+---
 <figure markdown="span">
   ![Image title](assets/cipheriq_logo_2x.png){ width="500" }
 </figure>
