@@ -99,3 +99,84 @@
 :root {
   --md-admonition-icon--theorem: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/></svg>");
 }
+
+/* Custom definition admonition - identical to theorem but green accent */
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+  border: none;
+  border-left: 0.35rem solid #2E8B57;             /* Green left accent */
+  background-color: rgba(46, 139, 87, 0.08);       /* Very light green tint for box */
+  border-radius: 0.3rem;
+  padding: 0.6rem 1rem;
+  margin: 1.2rem 0;
+}
+
+.md-typeset .definition > p {
+  font-size: 0.95rem;                             /* Same as theorem */
+  line-height: 1.55;
+  margin: 0.4em 0;
+  font-style: italic;                             /* Same classic style */
+}
+
+.md-typeset .definition > .admonition-title,
+.md-typeset .definition > summary {
+  background-color: rgba(46, 139, 87, 0.15);       /* Slightly darker green for title bar */
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.4rem 0.8rem 0.4rem 2.8rem;            /* Extra left padding for icon */
+  margin: -0.6rem -1rem 0.6rem -1rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+  position: relative;
+  min-height: 2rem;
+}
+
+/* Icon positioning - same as theorem (no overlap) */
+.md-typeset .definition > .admonition-title::before,
+.md-typeset .definition > summary::before {
+  background-color: #2E8B57;                      /* Green icon */
+  -webkit-mask-image: var(--md-admonition-icon--definition);
+  mask-image: var(--md-admonition-icon--definition);
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+/* Custom icon for definition - a lightbulb (common for ideas/definitions) */
+:root {
+  --md-admonition-icon--definition: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1m3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z'/></svg>");
+}
+
+/* Fix: Make code inside definition (and theorem) admonitions normal size */
+.md-typeset .admonition.definition code,
+.md-typeset details.definition code,
+.md-typeset .admonition.theorem code,
+.md-typeset details.theorem code {
+  font-size: 0.95rem !important;   /* Matches your normal inline code size; adjust if needed */
+}
+
+/* Optional: Also fix inline code literals (backticks) inside admonitions */
+.md-typeset .admonition.definition .docutils.literal,
+.md-typeset details.definition .docutils.literal,
+.md-typeset .admonition.theorem .docutils.literal,
+.md-typeset details.theorem .docutils.literal {
+  font-size: 0.8rem !important;
+}
+
+/* If you have fenced code blocks inside the admonition and they appear too small */
+.md-typeset .admonition.definition pre code,
+.md-typeset details.definition pre code,
+.md-typeset .admonition.theorem pre code,
+.md-typeset details.theorem pre code {
+  font-size: 0.8rem !important;    /* Typical fenced code block size in Material; change to 0.95rem if you want larger */
+}
+
+.mermaid {
+  background: rgba(59, 130, 182, 0.05);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  text-align: center;
+}

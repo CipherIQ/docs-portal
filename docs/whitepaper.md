@@ -84,14 +84,14 @@ The hybrid transition period introduces additional complexity. IETF TLS Hybrid K
 
 The CycloneDX CBOM specification (v1.6/1.7) provides a machine-readable format for documenting cryptographic assets. Originally developed by IBM Research and now maintained by OWASP, CBOM extends the Software Bill of Materials (SBOM) concept to cryptographic primitives.
 
-### Definition 2.1 (Cryptographic Asset)
+!!! definition "Definition 2.1 (Cryptographic Asset)"
 
-A cryptographic asset **A** is a structured object:
+    A cryptographic asset **A** is a structured object:
 
-```
-A = ( type, name, bomRef, cryptoProperties, properties, 
-      evidence, hashes, relationships )
-```
+    ```
+    A = (type, name, bomRef, cryptoProperties, properties, 
+          evidence, hashes, relationships)
+    ```
 
 where:
 
@@ -126,14 +126,14 @@ identifier  ::= <human-readable-slug> | hash-<sha256-prefix>
 
 ---
 
-### Definition 2.2 (Asset Type Taxonomy)
+!!! definition "Definition 2.2 (Asset Type Taxonomy)"
 
-The asset type set **T** extends CycloneDX with operational types:
+    The asset type set **T** extends CycloneDX with operational types:
 
-```
-T = { algorithm, certificate, certificate-request, key, library,
-      protocol, service, application, cipher-suite, unknown }
-```
+    ```
+    T = {algorithm, certificate, certificate-request, key, library,
+          protocol, service, application, cipher-suite, unknown}
+    ```
 
 | Type | CycloneDX assetType | bomRef Prefix | Description |
 |------|---------------------|---------------|-------------|
@@ -150,43 +150,40 @@ T = { algorithm, certificate, certificate-request, key, library,
 
 **Type Hierarchy:**
 
-```
-                    ┌─────────────────────────────────────────┐
-                    │          Cryptographic Asset            │
-                    └─────────────────────────────────────────┘
-                                        │
-           ┌────────────────────────────┼────────────────────────────┐
-           │                            │                            │
-    ┌──────┴──────┐             ┌───────┴───────┐            ┌───────┴───────┐
-    │  Primitive  │             │   Material    │            │  Operational  │
-    └─────────────┘             └───────────────┘            └───────────────┘
-           │                            │                            │
-    ┌──────┴──────┐             ┌───────┴───────┐            ┌───────┴───────┐
-    │ algorithm   │             │ certificate   │            │ service       │
-    │ protocol    │             │ cert-request  │            │ application   │
-    │ cipher-suite│             │ key           │            │ library       │
-    └─────────────┘             └───────────────┘            └───────────────┘
+```mermaid
+graph TD
+    A[Cryptographic Asset] --> B[Primitive]
+    A --> C[Material]
+    A --> D[Operational]
+
+    B --> E[-algorithm<br>-protocol<br>-cipher-suite]
+    C --> F[-certificate<br>-cert-request<br>-key]
+    D --> G[-service<br>-application<br>-library]
+
+    style E text-align:left
+    style F text-align:left
+    style G text-align:left
 ```
 
 ---
 
-### Definition 2.3 (CBOM Dependency Graph)
+!!! definition "Definition 2.3 (CBOM Dependency Graph)"
 
-A CBOM forms a **typed multigraph** `G = (V, E, τ, ω)` where:
+    A CBOM forms a **typed multigraph** `G = (V, E, τ, ω)` where:
 
-| Symbol | Definition |
-|--------|------------|
-| V | Set of cryptographic assets |
-| E ⊆ V × V | Set of directed edges |
-| τ: E → R | Relationship type function |
-| ω: E → [0,1] | Confidence weight function |
+    | Symbol | Definition |
+    |--------|------------|
+    | V | Set of cryptographic assets |
+    | E ⊆ V × V | Set of directed edges |
+    | τ: E → R | Relationship type function |
+    | ω: E → [0,1] | Confidence weight function |
 
-The relationship type set **R**:
+    The relationship type set **R**:
 
-```
-R = { IMPLEMENTS, USES, DEPENDS_ON, PROVIDES, CONTAINS,
-      CONFIGURES, LISTENS_ON, AUTHENTICATES_WITH, SIGNS, ISSUED_BY }
-```
+    ```
+    R = {IMPLEMENTS, USES, DEPENDS_ON, PROVIDES, CONTAINS,
+        CONFIGURES, LISTENS_ON, AUTHENTICATES_WITH, SIGNS, ISSUED_BY}
+    ```
 
 **Relationship Semantics:**
 
@@ -220,20 +217,19 @@ R = { IMPLEMENTS, USES, DEPENDS_ON, PROVIDES, CONTAINS,
 
 ---
 
-### Definition 2.4 (CryptoProperties Structure)
+!!! definition "Definition 2.4 (CryptoProperties Structure)"
 
-The `cryptoProperties` object is polymorphic based on asset type:
+    The `cryptoProperties` object is polymorphic based on asset type:
 
-```
-cryptoProperties = {
-  assetType: T,
-  algorithmProperties?:              AlgorithmProps,
-  certificateProperties?:            CertificateProps,
-  protocolProperties?:               ProtocolProps,
-  relatedCryptoMaterialProperties?:  KeyProps
-}
-```
-
+    ```
+    cryptoProperties = {
+      assetType: T,
+      algorithmProperties?:              AlgorithmProps,
+      certificateProperties?:            CertificateProps,
+      protocolProperties?:               ProtocolProps,
+      relatedCryptoMaterialProperties?:  KeyProps
+    }
+    ```
 #### 2.4.1 Algorithm Properties
 
 ```typescript
@@ -334,15 +330,13 @@ ProtocolProps = {
 }
 ```
 
----
+!!! definition "Definition 2.5 (Property Namespaces)"
 
-### Definition 2.5 (Property Namespaces)
+    Properties **P** use hierarchical namespaces for extensibility:
 
-Properties **P** use hierarchical namespaces for extensibility:
-
-```
-P = { (namespace:category:attribute, value) | value ∈ string }
-```
+    ```
+    P = { (namespace:category:attribute, value) | value ∈ string }
+    ```
 
 **Namespace Hierarchy:**
 
@@ -417,13 +411,14 @@ sig:cbom:algo:*      # Signature algorithm properties
 
 ---
 
-### Definition 2.6 (PQC Assessment Model)
+!!! definition "Definition 2.6 (PQC Assessment Model)"
 
-The Post-Quantum Cryptography assessment model provides quantum readiness evaluation:
+    The Post-Quantum Cryptography assessment model provides quantum readiness evaluation:
 
-```
-PQC_Assessment = (category, score, urgency, alternative, breakEstimate, source)
-```
+    ```
+    PQC_Assessment = (category, score, urgency, alternative, 
+                      breakEstimate, source)
+    ```
 
 #### 2.6.1 Category Classification
 
@@ -510,21 +505,21 @@ X25519       → X25519Kyber768
 
 ---
 
-### Definition 2.7 (Detection Evidence)
+!!! definition "Definition 2.7 (Detection Evidence)"
 
-Each asset includes provenance evidence for traceability:
+    Each asset includes provenance evidence for traceability:
 
-```typescript
-Evidence = {
-  occurrences: [{
-    location: FilePath,
-    line?: number,
-    offset?: number
-  }],
-  detectionMethod: DetectionMethod,
-  confidence: float  // [0.0, 1.0]
-}
-```
+    ```typescript
+    Evidence = {
+      occurrences: [{
+        location: FilePath,
+        line?: number,
+        offset?: number
+      }],
+      detectionMethod: DetectionMethod,
+      confidence: float  // [0.0, 1.0]
+    }
+    ```
 
 **Detection Methods:**
 
@@ -542,24 +537,24 @@ DetectionMethod = {
 
 ---
 
-### Definition 2.8 (CBOM Document Structure)
+!!!definition "Definition 2.8 (CBOM Document Structure)"
 
-A complete CBOM document **B**:
+    A complete CBOM document **B**:
 
-```typescript
-CBOM = {
-  bomFormat: "CycloneDX",
-  specVersion: "1.6" | "1.7",
-  serialNumber: URN,
-  version: integer,
-  metadata: Metadata,
-  components: Asset[],
-  dependencies: Dependency[],
-  vulnerabilities?: Vulnerability[],
-  compositions?: Composition[],
-  externalReferences?: ExternalRef[]
-}
-```
+    ```typescript
+    CBOM = {
+      bomFormat: "CycloneDX",
+      specVersion: "1.6" | "1.7",
+      serialNumber: URN,
+      version: integer,
+      metadata: Metadata,
+      components: Asset[],
+      dependencies: Dependency[],
+      vulnerabilities?: Vulnerability[],
+      compositions?: Composition[],
+      externalReferences?: ExternalRef[]
+    }
+    ```
 
 #### 2.8.1 Metadata Structure
 
@@ -739,6 +734,23 @@ Multiple occurrences are merged into evidence arrays rather than duplicate compo
 └─────────────┘               └─────────────┘
 ```
 
+**Cryptographic Dependency Example:**
+
+(Note the empty line right after ```mermaid)
+
+### Alternative: Slightly Safer Syntax (Explicit Subgraph Grouping)
+To avoid any parsing quirks, wrap the two columns in invisible subgraphs (this forces clearer structure without changing the visual layout):
+
+**Cryptographic Dependency Example:**
+
+```mermaid
+graph TD
+    Nginx["nginx<br>(service)"] -->|"USES"| TLS["TLS-1.3<br>(protocol)"]
+    Nginx -->|"AUTHENTICATES_WITH"| Cert["server.crt<br>(cert)"]
+    TLS -->|"PROVIDES"| Cipher["AES-256-GCM<br>cipher-suite"]
+    Cert -->|"DEPENDS_ON"| Key["server.key<br>(key)"]
+    Cipher -->|"USES"| Algo["AES-256<br>(algorithm)"]
+```
 
 ### 3.4.4 Relationship Type Matrix
 
@@ -769,11 +781,12 @@ The CipherIQ suite consists of four complementary tools providing complete crypt
 
 ### 3.6 Dual-Layer Observability Model
 
-**Definition 3.1 (Static Configuration Layer).** The static configuration layer **S** represents all cryptographic assets discoverable through filesystem analysis:
+!!! definition "Definition 3.1 (Static Configuration Layer)" 
+    The static configuration layer **S** represents all cryptographic assets discoverable through filesystem analysis:
 
-```
-S = {a : a extractable from (files ∪ binaries ∪ configurations ∪ certificates)}
-```
+    ```
+    S = {a : a extractable from (files ∪ binaries ∪ configurations ∪ certificates)}
+    ```
 
  **cbom-generator** implements the complete static layer with the following extraction capabilities:
 
@@ -786,11 +799,13 @@ S = {a : a extractable from (files ∪ binaries ∪ configurations ∪ certifica
 | Running processes | PROCESS_DETECTION (pgrep, /proc) | 0.90 |
 | Listening ports | NETWORK_CONFIG (/proc/net/tcp) | 0.85 |
 
-**Definition 3.2 (Runtime Behavior Layer).** The runtime behavior layer **R** represents all cryptographic assets observable during system operation:
+!!! definition "Definition 3.2 (Runtime Behavior Layer)" 
 
-```
-R = {a : a observable in (syscalls ∪ library_calls ∪ network_handshakes)}
-```
+    The runtime behavior layer **R** represents all cryptographic assets observable during system operation:
+
+    ```
+    R = {a : a observable in (syscalls ∪ library_calls ∪ network_handshakes)}
+    ```
 
 The runtime layer is implemented by  **crypto-tracer** and  **cpqc-flow**:
 
@@ -799,13 +814,15 @@ The runtime layer is implemented by  **crypto-tracer** and  **cpqc-flow**:
 | crypto-tracer | eBPF kernel probes | Cipher negotiations, key exchanges, RNG calls |
 | pqc-flow | Passive packet inspection | TLS 1.3, SSH, IKEv2, QUIC handshakes |
 
-**Definition 3.3 (Complete Cryptographic Posture).** The complete cryptographic posture **P** of a system is:
+!!! definition "Definition 3.3 (Complete Cryptographic Posture)" 
 
-```
-P = S ∪ R
-```
+    The complete cryptographic posture **P** of a system is:
 
-where  **cbom-generator** provides **S** and  **crypto-tracer** +  **cpqc-flow** provide **R**.
+    ```
+    P = S ∪ R
+    ```
+
+    where  **cbom-generator** provides **S** and  **crypto-tracer** +  **cpqc-flow** provide **R**.
 
 ### 3.7 Completeness Theorems
 
@@ -835,11 +852,13 @@ For typical systems, empirical measurements show S captures 70-90% of P, with th
 
 ### 3.8 Cryptographic Drift
 
-**Definition 3.4 (Cryptographic Drift).** Cryptographic drift **D** is the symmetric difference between static configuration and runtime behavior:
+!!! definition "Definition 3.4 (Cryptographic Drift)" 
 
-```
-D = (S \ R) ∪ (R \ S)
-```
+    Cryptographic drift **D** is the symmetric difference between static configuration and runtime behavior:
+
+    ```
+    D = (S \ R) ∪ (R \ S)
+    ```
 
 Drift is categorized into three types:
 
@@ -866,11 +885,13 @@ While complete drift detection requires the full suite,  **cbom-generator** prov
 3. **Staleness detection**: Expired certificates, deprecated algorithms in configurations
 4. **Policy validation**: Configured assets vs. organizational security policies
 
-**Definition 3.5 (Static Drift).** Static drift **D_S** is detectable by cbom-generator alone:
+!!! definition "Definition 3.5 (Static Drift)" 
 
-```
-D_S = {(config, deployed) : config ∈ S_config ∧ deployed ∈ S_deployed ∧ config ≠ deployed}
-```
+    Static drift **D_S** is detectable by cbom-generator alone:
+
+    ```
+    D_S = {(config, deployed) : config ∈ S_config ∧ deployed ∈ S_deployed ∧ config ≠ deployed}
+    ```
 
 Examples:
 
@@ -930,34 +951,33 @@ Examples:
 
  **cbom-generator** is a production-ready C11 multithreaded application optimized for high-throughput scanning of Linux filesystems, firmware images, and container rootfs.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    cbom-generator                           │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
-│  │ Filesystem  │  │ Certificate │  │ Configuration       │  │
-│  │ Walker      │  │ Parser      │  │ Analyzers           │  │
-│  │ (parallel)  │  │ (X.509,PEM) │  │ (YAML plugins)      │  │
-│  └──────┬──────┘  └──────┬──────┘  └──────────┬──────────┘  │
-│         │                │                    │             │
-│         └────────────────┼────────────────────┘             │
-│                          ▼                                  │
-│              ┌───────────────────────┐                      │
-│              │   Asset Store         │                      │
-│              │   (thread-safe)       │                      │
-│              └───────────┬───────────┘                      │
-│                          ▼                                  │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
-│  │ Relationship│  │ PQC         │  │ Privacy             │  │
-│  │ Builder     │  │ Classifier  │  │ Redactor            │  │
-│  └──────┬──────┘  └──────┬──────┘  └──────────┬──────────┘  │
-│         └────────────────┼────────────────────┘             │
-│                          ▼                                  │
-│              ┌───────────────────────┐                      │
-│              │  CycloneDX 1.6/1.7    │                      │
-│              │  CBOM Output          │                      │
-│              └───────────────────────┘                      │
-└─────────────────────────────────────────────────────────────┘
+**cbom-generator Architecture:**
+
+```mermaid
+graph TD
+    FS[Filesystem Walker<br>（parallel）]
+    CP[Certificate Parser<br>（X.509, PEM）]
+    CA[Configuration Analyzers<br>（YAML plugins）]
+
+    AS[Asset Store<br>（thread-safe）]
+
+    RB[Relationship Builder]
+    PQC[PQC Classifier]
+    PR[Privacy Redactor]
+
+    Output[CycloneDX 1.6/1.7<br>CBOM Output]
+
+    FS --> AS
+    CP --> AS
+    CA --> AS
+
+    AS --> RB
+    AS --> PQC
+    AS --> PR
+
+    RB --> Output
+    PQC --> Output
+    PR --> Output
 ```
 
 ### 4.2 Parallel Filesystem Scanning
@@ -1234,27 +1254,39 @@ Static CBOM generation reveals what cryptography *could* be used; runtime monito
 
 ### 5.2 eBPF Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        User Space                           │
-│  ┌────────────────────────────────────────────────────────┐ │
-│  │                   crypto-tracer                        │ │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌────────────────┐  │ │
-│  │  │ Event        │ │ Correlation  │ │ JSON           │  │ │
-│  │  │ Consumer     │ │ Engine       │ │ Formatter      │  │ │
-│  │  └──────┬───────┘ └──────────────┘ └────────────────┘  │ │
-│  └─────────┼──────────────────────────────────────────────┘ │
-│            │ Ring Buffer                                    │
-├────────────┼────────────────────────────────────────────────┤
-│            │              Kernel Space                      │
-│  ┌─────────▼──────────────────────────────────────────────┐ │
-│  │              eBPF Programs                             │ │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌────────────────┐  │ │
-│  │  │ sys_openat   │ │ dlopen       │ │ execve         │  │ │
-│  │  │ tracepoint   │ │ uprobe       │ │ tracepoint     │  │ │
-│  │  └──────────────┘ └──────────────┘ └────────────────┘  │ │
-│  └────────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph UserSpace["User Space"]
+    direction TB
+
+    %% Force 3 components in one horizontal row inside crypto-tracer
+    EC["Event Consumer"] --- CE["Correlation Engine"] --- JF["JSON Formatter"]
+    subgraph CryptoTracer["crypto-tracer"]
+    direction LR
+    EC
+    CE
+    JF
+    end
+
+    RB["Ring Buffer"]
+    end
+
+    subgraph KernelSpace["Kernel Space"]
+    direction TB
+
+    %% Force 3 eBPF programs in one horizontal row
+    SO["sys_openat<br>tracepoint"] --- DL["dlopen<br>uprobe"] --- EX["execve<br>tracepoint"]
+    subgraph eBPF["eBPF Programs"]
+    direction LR
+    SO
+    DL
+    EX
+    end
+    end
+
+    %% Connections
+    CryptoTracer --> RB
+    RB --> eBPF
 ```
 
 ### 5.3 Cryptographic Event Categories
@@ -1480,33 +1512,31 @@ Output: SSH PQC assessment
 
 ### 6.4 Network Flow Processing
 
-**Architecture:**
+
+**pqc-flow Architecture:**
+
+```mermaid
+graph TD
+    subgraph pqc_flow ["pqc-flow"]
+    direction TB
+
+    PC["Packet Capture<br>libpcap / AF_PACKET / eBPF XDP"]
+
+    PD["Protocol Dissector<br>TCP reassembly, UDP, QUIC"]
+
+    subgraph Analyzers [" "]
+    direction LR
+    TLA["TLS 1.3 Analyzer"] --- SSH["SSH Analyzer"] --- IKE["IKEv2 Analyzer"]
+    end
+
+    PQC["PQC Assessment<br>Aggregator"]
+
+    PC --> PD
+    PD --> Analyzers
+    Analyzers --> PQC
+    end
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                        pqc-flow                             │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐                                           │
-│  │ Packet       │ libpcap / AF_PACKET / eBPF XDP            │
-│  │ Capture      │                                           │
-│  └──────┬───────┘                                           │
-│         ▼                                                   │
-│  ┌──────────────┐                                           │
-│  │ Protocol     │ TCP reassembly, UDP, QUIC                 │
-│  │ Dissector    │                                           │
-│  └──────┬───────┘                                           │
-│         ▼                                                   │
-│  ┌──────────────┐  ┌──────────────┐  ┌────────────────────┐ │
-│  │ TLS 1.3      │  │ SSH          │  │ IKEv2              │ │
-│  │ Analyzer     │  │ Analyzer     │  │ Analyzer           │ │
-│  └──────┬───────┘  └──────┬───────┘  └──────────┬─────────┘ │
-│         └────────────────┬──────────────────────┘           │
-│                          ▼                                  │
-│              ┌───────────────────────┐                      │
-│              │ PQC Assessment        │                      │
-│              │ Aggregator            │                      │
-│              └───────────────────────┘                      │
-└─────────────────────────────────────────────────────────────┘
-```
+
 
 **Performance Characteristics:**
 
@@ -1867,24 +1897,6 @@ Experimental evaluation on embedded Linux systems demonstrated 93% coverage agai
 
 ---
 
-## Appendix A: CycloneDX 1.7 CBOM Schema Extensions
-
-[Detailed JSON schema for cryptographic asset representation]
-
-## Appendix B: YAML Plugin Development Guide
-
-[Complete specification for service discovery plugin authorship]
-
-## Appendix C: eBPF Program Listings
-
-[Full source code for crypto-tracer eBPF programs]
-
-## Appendix D: Performance Tuning Guide
-
-[Configuration parameters for optimizing throughput in enterprise deployments]
-
-
----
 Copyright (c) 2025 Graziano Labs Corp.
 
 <script>
