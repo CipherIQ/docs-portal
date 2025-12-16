@@ -713,36 +713,6 @@ Multiple occurrences are merged into evidence arrays rather than duplicate compo
 
 ### 3.4.3 Dependency Graph Example
 
-```
-┌─────────────┐     USES      ┌─────────────┐
-│   nginx     │──────────────▶│   TLS-1.3   │
-│  (service)  │               │  (protocol) │
-└─────────────┘               └─────────────┘
-       │                             │
-       │ AUTHENTICATES_WITH          │ PROVIDES
-       ▼                             ▼
-┌─────────────┐               ┌─────────────┐
-│  server.crt │               │ AES-256-GCM │
-│   (cert)    │               │cipher-suite │
-└─────────────┘               └─────────────┘
-       │                             │
-       │ DEPENDS_ON                  │ USES
-       ▼                             ▼
-┌─────────────┐               ┌─────────────┐
-│  server.key │               │   AES-256   │
-│    (key)    │               │ (algorithm) │
-└─────────────┘               └─────────────┘
-```
-
-**Cryptographic Dependency Example:**
-
-(Note the empty line right after ```mermaid)
-
-### Alternative: Slightly Safer Syntax (Explicit Subgraph Grouping)
-To avoid any parsing quirks, wrap the two columns in invisible subgraphs (this forces clearer structure without changing the visual layout):
-
-**Cryptographic Dependency Example:**
-
 ```mermaid
 graph TD
     Nginx["nginx<br>(service)"] -->|"USES"| TLS["TLS-1.3<br>(protocol)"]
