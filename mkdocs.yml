@@ -1,6 +1,6 @@
 site_name: CipherIQ Portal
 site_description: CipherIQ products website
-site_url: https://www.cipheriq.io/
+site_url: https://docs.cipheriq.io/
 
 docs_dir: docs
 site_dir: site
@@ -175,15 +175,9 @@ nav:
       - Troubleshooting: pqc-flow/operations/troubleshooting.md
     - Reference:
       - Reference Tables: pqc-flow/reference/tables.md
-  - About:
-    - about.md
-  - News:
-    - news/index.md
-    - Dec 15-2025 Press Release: news/PR-Dec15-2025.md
-
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CipherIQ
 
-copyright: Copyright &copy; 2025 Graziano Labs Corp.
+copyright: Copyright &copy; 2026 Graziano Labs Corp.
